@@ -1,0 +1,23 @@
+{
+    "name": "visionframework/visioniconic-v1",
+    "description": "Core framework for VisionFramework with modular architecture.",
+    "version": "1.0.0",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "VisionFramework\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "your-email@example.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

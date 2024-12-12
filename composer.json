@@ -1,8 +1,8 @@
 {
-    "name": "visionframework/visioniconic-v1",
-    "description": "Core framework for VisionFramework with modular architecture.",
+    "name": "vision-serve/vision",
+    "description": "Core framework for Vision PHP Framework with modular architecture.",
     "version": "1.0.0",
-    "type": "library",
+    "type": "project",
     "autoload": {
         "psr-4": {
             "VisionFramework\\": "src/"
@@ -14,7 +14,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Elwiraa",
+            "name": "Elwira",
             "email": "flymecosupply@gmail.com"
         }
     ],

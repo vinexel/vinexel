@@ -1,23 +1,52 @@
 {
     "name": "vision-serve/vision",
-    "description": "Core framework for Vision PHP Framework with modular architecture.",
-    "version": "1.0.0",
-    "type": "project",
-    "autoload": {
-        "psr-4": {
-            "VisionFramework\\": "src/"
-        }
-    },
-    "require": {
-        "php": ">=7.4"
-    },
+    "description": "A fullstack multi project web framework with Hierarchical Model View Controller (HMVC) Multi Project, hybrid Golang restapi and PHP rendering Framework",
+    "keywords": ["Framework", "PHP", "Golang", "MVC", "hybrid Golang and PHP Framework", "Vision", "PHP Vision Framework", "Golang Vision Framework", "Vision Indonesia", "PHP Vision", "Golang Vision"],
+    "type": "framework",
     "license": "MIT",
+    "homepage": "https://visioniconic.com",
+    "version": "1.0.0",
+
+    "support": {
+        "email": "help@visioniconic.com",
+        "source": "https://github.com/visionframework/",
+        "docs": "https://visioniconic.com/docs"
+    },
+
     "authors": [
         {
-            "name": "Elwira",
-            "email": "flymecosupply@gmail.com"
+            "name": "Elwira Perdana",
+            "social": "@elwiraperdana",
+            "email": "elwira@visioniconic.com",
+            "homepage": "https://github.com/visionframework/",
+            "role": "developer"
         }
     ],
+
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "System\\": "system/",
+            "Vision\\": "system/framework/",
+            "Deeper\\": "system/vendor/vision/fragment/kit/deeper/"
+        }
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+            "Vision\\Tests\\": "tests/"
+        }
+    },
+
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "vendor-dir": "system/vendor/plugins"
+    },
+
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "require": {
+        "twig/twig": "^3.18"
+    }
 }

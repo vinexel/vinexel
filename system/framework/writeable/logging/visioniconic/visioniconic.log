@@ -1,0 +1,258 @@
+[2025-01-28 19:36:53] [ERROR]: Error: require_once(C:\xampp\htdocs\visionframework-3\visioniconic-v4/vendor/vision/core/modules/globals/malscan/dashboard.rapid.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\kit\deeper\traits\malscan\ViewsTrait.php on line 36
+Trace:
+#0 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\kit\deeper\traits\malscan\ViewsTrait.php(36): {closure}(2, 'require_once(C:...', 'C:\\xampp\\htdocs...', 36)
+#1 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\kit\deeper\traits\malscan\ViewsTrait.php(36): require_once()
+#2 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\kit\deeper\traits\malscan\ViewsTrait.php(13): Visioniconic\Controllers\BaseController->view('dashboard', Array)
+#3 C:\xampp\htdocs\visionframework-3\visioniconic-v4\app\visioniconic\controllers\BaseController.php(31): Visioniconic\Controllers\BaseController->scanner(Array, 'dashboard')
+#4 [internal function]: Visioniconic\Controllers\BaseController->ms1()
+#5 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\Router.php(119): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\Router.php(79): Iconic\Core\Modules\Router\Router::callAction('BaseController@...', Array)
+#7 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vision\modules\Router.php(71): Iconic\Core\Modules\Router\Router::dispatch('', 'index', Array)
+#8 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\RouterInitializer.php(32): Vision\Modules\Router::dispatch('', 'index', Array)
+#9 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\RegisterModule.php(63): Iconic\Core\Modules\Router\RouterInitializer::initRouter('', 'index', Array)
+#10 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\RegisterModule.php(126): Iconic\Core\Modules\RegisterModule->__construct()
+#11 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\Transmitter.php(27): Iconic\Core\Modules\RegisterModule::getInstance()
+#12 C:\xampp\htdocs\visionframework-3\visioniconic-v4\public\index.php(35): Iconic\Core\Transmitter::http()
+#13 {main}
+
+[2025-01-28 19:36:53] [ERROR]: Error: include(C:\xampp\htdocs\visionframework-3\visioniconic-v4/vendor/vision/fragment/resources/view/404.rapid): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\debug\Debugger.php on line 175
+Trace:
+#0 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\debug\Debugger.php(175): {closure}(2, 'include(C:\\xamp...', 'C:\\xampp\\htdocs...', 175)
+#1 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\debug\Debugger.php(175): include()
+#2 C:\xampp\htdocs\visionframework-3\visioniconic-v4\app\visioniconic\controllers\BaseController.php(140): Iconic\Core\Modules\Debug\Debugger::renderError(Object(ErrorException))
+#3 C:\xampp\htdocs\visionframework-3\visioniconic-v4\app\visioniconic\controllers\BaseController.php(36): Visioniconic\Controllers\BaseController->handleException(Object(ErrorException))
+#4 [internal function]: Visioniconic\Controllers\BaseController->ms1()
+#5 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\Router.php(119): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\Router.php(79): Iconic\Core\Modules\Router\Router::callAction('BaseController@...', Array)
+#7 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vision\modules\Router.php(71): Iconic\Core\Modules\Router\Router::dispatch('', 'index', Array)
+#8 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\RouterInitializer.php(32): Vision\Modules\Router::dispatch('', 'index', Array)
+#9 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\RegisterModule.php(63): Iconic\Core\Modules\Router\RouterInitializer::initRouter('', 'index', Array)
+#10 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\RegisterModule.php(126): Iconic\Core\Modules\RegisterModule->__construct()
+#11 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\Transmitter.php(27): Iconic\Core\Modules\RegisterModule::getInstance()
+#12 C:\xampp\htdocs\visionframework-3\visioniconic-v4\public\index.php(35): Iconic\Core\Transmitter::http()
+#13 {main}
+
+[2025-01-28 19:36:53] [ERROR]: Error: Uncaught ErrorException: Undefined variable $errorDetails in C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\resources\view\404.rapid:75
+Stack trace:
+#0 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\resources\view\404.rapid(75): {closure}(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\debug\Debug.php(30): include('C:\\xampp\\htdocs...')
+#2 [internal function]: {closure}(Object(ErrorException))
+#3 {main}
+  thrown
+File: C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\resources\view\404.rapid on line 75
+Trace:
+#0 [internal function]: {closure}()
+#1 {main}
+
+[2025-01-28 19:37:17] [DEBUG]: Controller initialized
+[2025-01-28 19:37:17] [ERROR]: Error: require_once(C:\xampp\htdocs\visionframework-3\visioniconic-v4/vendor/vision/core/modules/globals/malscan/dashboard.rapid.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\kit\deeper\traits\malscan\ViewsTrait.php on line 36
+Trace:
+#0 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\kit\deeper\traits\malscan\ViewsTrait.php(36): {closure}(2, 'require_once(C:...', 'C:\\xampp\\htdocs...', 36)
+#1 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\kit\deeper\traits\malscan\ViewsTrait.php(36): require_once()
+#2 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\kit\deeper\traits\malscan\ViewsTrait.php(13): Visioniconic\Controllers\BaseController->view('dashboard', Array)
+#3 C:\xampp\htdocs\visionframework-3\visioniconic-v4\app\visioniconic\controllers\BaseController.php(31): Visioniconic\Controllers\BaseController->scanner(Array, 'dashboard')
+#4 [internal function]: Visioniconic\Controllers\BaseController->ms1()
+#5 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\Router.php(119): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\Router.php(79): Iconic\Core\Modules\Router\Router::callAction('BaseController@...', Array)
+#7 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vision\modules\Router.php(71): Iconic\Core\Modules\Router\Router::dispatch('', 'index', Array)
+#8 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\RouterInitializer.php(32): Vision\Modules\Router::dispatch('', 'index', Array)
+#9 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\RegisterModule.php(63): Iconic\Core\Modules\Router\RouterInitializer::initRouter('', 'index', Array)
+#10 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\RegisterModule.php(126): Iconic\Core\Modules\RegisterModule->__construct()
+#11 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\Transmitter.php(27): Iconic\Core\Modules\RegisterModule::getInstance()
+#12 C:\xampp\htdocs\visionframework-3\visioniconic-v4\public\index.php(35): Iconic\Core\Transmitter::http()
+#13 {main}
+
+[2025-01-28 19:37:17] [ERROR]: Error: include(C:\xampp\htdocs\visionframework-3\visioniconic-v4/vendor/vision/fragment/resources/view/error_template.rapid): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\debug\Debugger.php on line 172
+Trace:
+#0 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\debug\Debugger.php(172): {closure}(2, 'include(C:\\xamp...', 'C:\\xampp\\htdocs...', 172)
+#1 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\debug\Debugger.php(172): include()
+#2 C:\xampp\htdocs\visionframework-3\visioniconic-v4\app\visioniconic\controllers\BaseController.php(140): Iconic\Core\Modules\Debug\Debugger::renderError(Object(ErrorException))
+#3 C:\xampp\htdocs\visionframework-3\visioniconic-v4\app\visioniconic\controllers\BaseController.php(36): Visioniconic\Controllers\BaseController->handleException(Object(ErrorException))
+#4 [internal function]: Visioniconic\Controllers\BaseController->ms1()
+#5 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\Router.php(119): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\Router.php(79): Iconic\Core\Modules\Router\Router::callAction('BaseController@...', Array)
+#7 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vision\modules\Router.php(71): Iconic\Core\Modules\Router\Router::dispatch('', 'index', Array)
+#8 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\RouterInitializer.php(32): Vision\Modules\Router::dispatch('', 'index', Array)
+#9 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\RegisterModule.php(63): Iconic\Core\Modules\Router\RouterInitializer::initRouter('', 'index', Array)
+#10 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\RegisterModule.php(126): Iconic\Core\Modules\RegisterModule->__construct()
+#11 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\Transmitter.php(27): Iconic\Core\Modules\RegisterModule::getInstance()
+#12 C:\xampp\htdocs\visionframework-3\visioniconic-v4\public\index.php(35): Iconic\Core\Transmitter::http()
+#13 {main}
+
+[2025-01-28 19:37:17] [ERROR]: Error: Cannot redeclare Iconic\Core\Modules\Debug\getCodeContext() (previously declared in C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\debug\Debugger.php:119)
+File: C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\debug\Debugger.php on line 119
+Trace:
+#0 [internal function]: {closure}()
+#1 {main}
+
+[2025-01-28 19:38:10] [DEBUG]: Controller initialized
+[2025-01-28 19:38:10] [ERROR]: Error: require_once(C:\xampp\htdocs\visionframework-3\visioniconic-v4/vendor/vision/core/modules/globals/malscan/dashboard.rapid.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\kit\deeper\traits\malscan\ViewsTrait.php on line 36
+Trace:
+#0 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\kit\deeper\traits\malscan\ViewsTrait.php(36): {closure}(2, 'require_once(C:...', 'C:\\xampp\\htdocs...', 36)
+#1 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\kit\deeper\traits\malscan\ViewsTrait.php(36): require_once()
+#2 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\kit\deeper\traits\malscan\ViewsTrait.php(13): Visioniconic\Controllers\BaseController->view('dashboard', Array)
+#3 C:\xampp\htdocs\visionframework-3\visioniconic-v4\app\visioniconic\controllers\BaseController.php(31): Visioniconic\Controllers\BaseController->scanner(Array, 'dashboard')
+#4 [internal function]: Visioniconic\Controllers\BaseController->ms1()
+#5 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\Router.php(119): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\Router.php(79): Iconic\Core\Modules\Router\Router::callAction('BaseController@...', Array)
+#7 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vision\modules\Router.php(71): Iconic\Core\Modules\Router\Router::dispatch('', 'index', Array)
+#8 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\RouterInitializer.php(32): Vision\Modules\Router::dispatch('', 'index', Array)
+#9 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\RegisterModule.php(63): Iconic\Core\Modules\Router\RouterInitializer::initRouter('', 'index', Array)
+#10 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\RegisterModule.php(126): Iconic\Core\Modules\RegisterModule->__construct()
+#11 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\Transmitter.php(27): Iconic\Core\Modules\RegisterModule::getInstance()
+#12 C:\xampp\htdocs\visionframework-3\visioniconic-v4\public\index.php(35): Iconic\Core\Transmitter::http()
+#13 {main}
+
+[2025-01-28 19:38:10] [ERROR]: Error: include(C:\xampp\htdocs\visionframework-3\visioniconic-v4/vendor/vision/fragment/resources/view/error_template.rapid): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\debug\Debugger.php on line 172
+Trace:
+#0 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\debug\Debugger.php(172): {closure}(2, 'include(C:\\xamp...', 'C:\\xampp\\htdocs...', 172)
+#1 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\debug\Debugger.php(172): include()
+#2 C:\xampp\htdocs\visionframework-3\visioniconic-v4\app\visioniconic\controllers\BaseController.php(140): Iconic\Core\Modules\Debug\Debugger::renderError(Object(ErrorException))
+#3 C:\xampp\htdocs\visionframework-3\visioniconic-v4\app\visioniconic\controllers\BaseController.php(36): Visioniconic\Controllers\BaseController->handleException(Object(ErrorException))
+#4 [internal function]: Visioniconic\Controllers\BaseController->ms1()
+#5 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\Router.php(119): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\Router.php(79): Iconic\Core\Modules\Router\Router::callAction('BaseController@...', Array)
+#7 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vision\modules\Router.php(71): Iconic\Core\Modules\Router\Router::dispatch('', 'index', Array)
+#8 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\RouterInitializer.php(32): Vision\Modules\Router::dispatch('', 'index', Array)
+#9 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\RegisterModule.php(63): Iconic\Core\Modules\Router\RouterInitializer::initRouter('', 'index', Array)
+#10 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\RegisterModule.php(126): Iconic\Core\Modules\RegisterModule->__construct()
+#11 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\Transmitter.php(27): Iconic\Core\Modules\RegisterModule::getInstance()
+#12 C:\xampp\htdocs\visionframework-3\visioniconic-v4\public\index.php(35): Iconic\Core\Transmitter::http()
+#13 {main}
+
+[2025-01-28 19:38:10] [ERROR]: Error: Cannot redeclare Iconic\Core\Modules\Debug\getCodeContext() (previously declared in C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\debug\Debugger.php:119)
+File: C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\debug\Debugger.php on line 119
+Trace:
+#0 [internal function]: {closure}()
+#1 {main}
+
+[2025-01-28 19:38:49] [DEBUG]: Controller initialized
+[2025-01-28 19:38:49] [ERROR]: Error: require_once(C:\xampp\htdocs\visionframework-3\visioniconic-v4/vendor/vision/core/modules/globals/malscan/dashboard.rapid.php): Failed to open stream: No such file or directory
+File: C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\kit\deeper\traits\malscan\ViewsTrait.php on line 36
+Trace:
+#0 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\kit\deeper\traits\malscan\ViewsTrait.php(36): {closure}(2, 'require_once(C:...', 'C:\\xampp\\htdocs...', 36)
+#1 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\kit\deeper\traits\malscan\ViewsTrait.php(36): require_once()
+#2 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\fragment\kit\deeper\traits\malscan\ViewsTrait.php(13): Visioniconic\Controllers\BaseController->view('dashboard', Array)
+#3 C:\xampp\htdocs\visionframework-3\visioniconic-v4\app\visioniconic\controllers\BaseController.php(31): Visioniconic\Controllers\BaseController->scanner(Array, 'dashboard')
+#4 [internal function]: Visioniconic\Controllers\BaseController->ms1()
+#5 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\Router.php(119): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\Router.php(79): Iconic\Core\Modules\Router\Router::callAction('BaseController@...', Array)
+#7 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vision\modules\Router.php(71): Iconic\Core\Modules\Router\Router::dispatch('', 'index', Array)
+#8 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\router\RouterInitializer.php(32): Vision\Modules\Router::dispatch('', 'index', Array)
+#9 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\RegisterModule.php(63): Iconic\Core\Modules\Router\RouterInitializer::initRouter('', 'index', Array)
+#10 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\modules\RegisterModule.php(126): Iconic\Core\Modules\RegisterModule->__construct()
+#11 C:\xampp\htdocs\visionframework-3\visioniconic-v4\system\vendor\vision\core\Transmitter.php(27): Iconic\Core\Modules\RegisterModule::getInstance()
+#12 C:\xampp\htdocs\visionframework-3\visioniconic-v4\public\index.php(35): Iconic\Core\Transmitter::http()
+#13 {main}
+
+[2025-01-28 19:41:21] [DEBUG]: Controller initialized
+[2025-01-28 19:41:21] [DEBUG]: Controller initialized
+[2025-01-28 19:41:23] [DEBUG]: Controller initialized
+[2025-01-28 19:41:23] [DEBUG]: Controller initialized
+[2025-01-28 19:41:25] [DEBUG]: Controller initialized
+[2025-01-28 19:41:25] [DEBUG]: Controller initialized
+[2025-01-28 19:41:27] [DEBUG]: Controller initialized
+[2025-01-28 19:41:27] [DEBUG]: Controller initialized
+[2025-01-28 19:41:28] [DEBUG]: Controller initialized
+[2025-01-28 19:41:28] [DEBUG]: Controller initialized
+[2025-01-28 19:41:29] [DEBUG]: Controller initialized
+[2025-01-28 19:41:29] [DEBUG]: Controller initialized
+[2025-01-28 20:02:15] [DEBUG]: Controller initialized
+[2025-01-28 20:02:15] [DEBUG]: Controller initialized
+[2025-01-28 20:02:23] [DEBUG]: Controller initialized
+[2025-01-28 20:02:23] [DEBUG]: Controller initialized
+[2025-01-28 20:02:24] [DEBUG]: Controller initialized
+[2025-01-28 20:02:24] [DEBUG]: Controller initialized
+[2025-01-28 20:02:26] [DEBUG]: Controller initialized
+[2025-01-28 20:02:26] [DEBUG]: Controller initialized
+[2025-01-28 20:06:35] [DEBUG]: Controller initialized
+[2025-01-28 20:06:35] [DEBUG]: Controller initialized
+[2025-01-28 20:07:22] [DEBUG]: Controller initialized
+[2025-01-28 20:07:22] [DEBUG]: Controller initialized
+[2025-01-28 20:07:24] [DEBUG]: Controller initialized
+[2025-01-28 20:07:24] [DEBUG]: Controller initialized
+[2025-01-28 20:07:25] [DEBUG]: Controller initialized
+[2025-01-28 20:07:25] [DEBUG]: Controller initialized
+[2025-01-28 20:18:31] [DEBUG]: Controller initialized
+[2025-01-28 20:18:31] [DEBUG]: Controller initialized
+[2025-01-28 20:18:33] [DEBUG]: Controller initialized
+[2025-01-28 20:18:33] [DEBUG]: Controller initialized
+[2025-01-28 20:18:34] [DEBUG]: Controller initialized
+[2025-01-28 20:18:34] [DEBUG]: Controller initialized
+[2025-01-28 20:18:35] [DEBUG]: Controller initialized
+[2025-01-28 20:18:35] [DEBUG]: Controller initialized
+[2025-01-28 20:18:38] [DEBUG]: Controller initialized
+[2025-01-28 20:18:38] [DEBUG]: Controller initialized
+[2025-01-28 20:22:32] [DEBUG]: Controller initialized
+[2025-01-28 20:22:32] [DEBUG]: Controller initialized
+[2025-01-28 20:24:31] [DEBUG]: Controller initialized
+[2025-01-28 20:24:31] [DEBUG]: Controller initialized
+[2025-01-28 20:24:32] [DEBUG]: Controller initialized
+[2025-01-28 20:24:32] [DEBUG]: Controller initialized
+[2025-01-28 20:24:41] [DEBUG]: Controller initialized
+[2025-01-28 20:24:43] [DEBUG]: Controller initialized
+[2025-01-28 20:24:44] [DEBUG]: Controller initialized
+[2025-01-28 20:24:45] [DEBUG]: Controller initialized
+[2025-01-28 20:24:55] [ERROR]: Error: Call to a member function getLayoutPath() on null
+File: C:\xampp\htdocs\visionframework-3\visioniconic-v5\system\vendor\vision\core\modules\controller\Controller.php on line 39
+Trace:
+#0 C:\xampp\htdocs\visionframework-3\visioniconic-v5\system\framework\modules\Controller.php(36): Iconic\Core\Modules\Controller\Controller->render('indonesia.index', 'layouts.indones...', Array, NULL)
+#1 C:\xampp\htdocs\visionframework-3\visioniconic-v5\app\visioniconic\controllers\HomeController.php(22): Vision\Modules\Controller->render('indonesia.index', 'layouts.indones...', Array)
+#2 [internal function]: Visioniconic\Controllers\HomeController->index()
+#3 C:\xampp\htdocs\visionframework-3\visioniconic-v5\system\vendor\vision\core\modules\router\Router.php(119): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\visionframework-3\visioniconic-v5\system\vendor\vision\core\modules\router\Router.php(79): Iconic\Core\Modules\Router\Router::callAction('HomeController@...', Array)
+#5 C:\xampp\htdocs\visionframework-3\visioniconic-v5\system\framework\modules\Router.php(71): Iconic\Core\Modules\Router\Router::dispatch('', 'index', Array)
+#6 C:\xampp\htdocs\visionframework-3\visioniconic-v5\system\vendor\vision\core\modules\router\RouterInitializer.php(32): Vision\Modules\Router::dispatch('', 'index', Array)
+#7 C:\xampp\htdocs\visionframework-3\visioniconic-v5\system\vendor\vision\core\modules\RegisterModule.php(63): Iconic\Core\Modules\Router\RouterInitializer::initRouter('', 'index', Array)
+#8 C:\xampp\htdocs\visionframework-3\visioniconic-v5\system\vendor\vision\core\modules\RegisterModule.php(126): Iconic\Core\Modules\RegisterModule->__construct()
+#9 C:\xampp\htdocs\visionframework-3\visioniconic-v5\system\vendor\vision\core\Transmitter.php(27): Iconic\Core\Modules\RegisterModule::getInstance()
+#10 C:\xampp\htdocs\visionframework-3\visioniconic-v5\public\index.php(35): Iconic\Core\Transmitter::http()
+#11 {main}
+
+[2025-01-28 20:25:10] [DEBUG]: Controller initialized
+[2025-01-28 20:25:11] [DEBUG]: Controller initialized
+[2025-01-28 20:25:21] [DEBUG]: Controller initialized
+[2025-01-28 20:25:21] [ERROR]: Error: Call to a member function getLayoutPath() on null
+File: C:\xampp\htdocs\visionframework-3\visioniconic-v5\system\vendor\vision\core\modules\controller\Controller.php on line 39
+Trace:
+#0 C:\xampp\htdocs\visionframework-3\visioniconic-v5\system\framework\modules\Controller.php(36): Iconic\Core\Modules\Controller\Controller->render('indonesia.conta...', 'layouts.indones...', Array, NULL)
+#1 C:\xampp\htdocs\visionframework-3\visioniconic-v5\app\visioniconic\controllers\HomeController.php(37): Vision\Modules\Controller->render('indonesia.conta...', 'layouts.indones...', Array)
+#2 [internal function]: Visioniconic\Controllers\HomeController->contact()
+#3 C:\xampp\htdocs\visionframework-3\visioniconic-v5\system\vendor\vision\core\modules\router\Router.php(119): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\visionframework-3\visioniconic-v5\system\vendor\vision\core\modules\router\Router.php(79): Iconic\Core\Modules\Router\Router::callAction('HomeController@...', Array)
+#5 C:\xampp\htdocs\visionframework-3\visioniconic-v5\system\framework\modules\Router.php(71): Iconic\Core\Modules\Router\Router::dispatch('', 'index', Array)
+#6 C:\xampp\htdocs\visionframework-3\visioniconic-v5\system\vendor\vision\core\modules\router\RouterInitializer.php(32): Vision\Modules\Router::dispatch('', 'index', Array)
+#7 C:\xampp\htdocs\visionframework-3\visioniconic-v5\system\vendor\vision\core\modules\RegisterModule.php(63): Iconic\Core\Modules\Router\RouterInitializer::initRouter('', 'index', Array)
+#8 C:\xampp\htdocs\visionframework-3\visioniconic-v5\system\vendor\vision\core\modules\RegisterModule.php(126): Iconic\Core\Modules\RegisterModule->__construct()
+#9 C:\xampp\htdocs\visionframework-3\visioniconic-v5\system\vendor\vision\core\Transmitter.php(27): Iconic\Core\Modules\RegisterModule::getInstance()
+#10 C:\xampp\htdocs\visionframework-3\visioniconic-v5\public\index.php(35): Iconic\Core\Transmitter::http()
+#11 {main}
+
+[2025-01-28 20:28:40] [ERROR]: Error: Method Visioniconic\Controllers\HomeController::__construct() cannot declare a return type
+File: C:\xampp\htdocs\visionframework-3\visioniconic-v5\app\visioniconic\controllers\HomeController.php on line 12
+Trace:
+#0 [internal function]: {closure}()
+#1 {main}
+
+[2025-01-28 20:28:50] [DEBUG]: Controller initialized
+[2025-01-29 08:34:27] [DEBUG]: Controller initialized
+[2025-01-29 08:38:13] [DEBUG]: Controller initialized
+[2025-01-29 08:52:38] [DEBUG]: Controller initialized
+[2025-01-29 08:52:40] [DEBUG]: Controller initialized
+[2025-01-29 08:52:41] [DEBUG]: Controller initialized
+[2025-01-29 08:52:42] [DEBUG]: Controller initialized
+[2025-01-29 08:52:43] [DEBUG]: Controller initialized
+[2025-01-29 08:52:45] [DEBUG]: Controller initialized
+[2025-01-29 08:53:02] [DEBUG]: Controller initialized
+[2025-01-29 08:59:19] [DEBUG]: Controller initialized
+[2025-01-29 08:59:35] [DEBUG]: Controller initialized
+[2025-01-29 09:05:28] [DEBUG]: Controller initialized
+[2025-01-29 09:05:30] [DEBUG]: Controller initialized
+[2025-01-29 09:05:31] [DEBUG]: Controller initialized
+[2025-01-29 09:13:20] [DEBUG]: Controller initialized

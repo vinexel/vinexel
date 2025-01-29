@@ -1,0 +1,33 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * Vision Framework.
+ *
+ * @package Vision
+ * @author Elwira Perdana
+ * @copyright (c) PT Iconic Wira Niaga
+ * @license MIT License
+ */
+
+/*********************************************************************************************************
+ *      "php vision serve" untuk memulai server atau "php vision list" melihat perintah yang ada.        *
+ *      "php vision serve" secara default tanpa argumen untuk mulai proyek default pada port 8000.       *
+ *      "php vision serve {port}" dengan argumen untuk memulai proyek spesifik yang diinginkan.          *
+ * 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ *
+ *      use the "php vision serve" to start server or "php vision list" to see the available commands.   *
+ *      "php vision serve" by default with no arguments to start default project at port 8000.           *
+ *      "php vision serve {port}" with argument to start specific project you want.                      *
+ *********************************************************************************************************/
+
+use Iconic\Core\Modules\Commands\Command;
+
+define('VISION_START', microtime(true));
+
+require_once 'system/vendor/plugins/autoload.php';
+require_once 'system/vendor/vision/Iconic.php';
+
+$commandHandler = new Command();
+$commandHandler->runCommand();

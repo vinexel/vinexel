@@ -6,10 +6,12 @@
     "license": "MIT",
     "homepage": "https://visioniconic.com",
     "version": "1.0.0",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
 
     "support": {
         "email": "help@visioniconic.com",
-        "source": "https://github.com/visionframework/",
+        "source": "https://github.com/visionframework/vision",
         "docs": "https://visioniconic.com/docs"
     },
 
@@ -25,7 +27,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/vision-serve/vision/"
+            "url": "https://github.com/vision-serve/vision"
         }
     ],
 
@@ -50,10 +52,8 @@
         "vendor-dir": "system/vendor/plugins"
     },
 
-    "minimum-stability": "stable",
-    "prefer-stable": true,
     "require": {
         "php": "^8.0",
-        "twig/twig": "^3.18"
+        "twig/twig": "^3.19"
     }
 }

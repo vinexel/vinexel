@@ -31,6 +31,6 @@ To create a new Vision Framework project, run the following command:
 composer create-project vision-serve/vision my-project
 ```
 
-# 3. Configure Your Environment
+## 3. Configure Your Environment
 - **APP_ENV=local**
 - **APP_KEY=your-app-key**

@@ -30,3 +30,13 @@ To create a new Vision Framework project, run the following command:
 ```bash
 composer create-project vision-serve/vision my-project
 ```
+
+# 3. Configure Your Environment
+APP_ENV=local
+APP_KEY=your-app-key
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database
+DB_USERNAME=root
+DB_PASSWORD=

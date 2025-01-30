@@ -1,5 +1,5 @@
 {
-    "name": "vision/vision",
+    "name": "vision-serve/vision",
     "description": "A fullstack multi project web framework with Hierarchical Model View Controller (HMVC) Multi Project, hybrid Golang restapi and PHP rendering Framework",
     "keywords": ["Framework", "PHP", "Golang", "MVC", "hybrid Golang and PHP Framework", "Vision", "PHP Vision Framework", "Golang Vision Framework", "Vision Indonesia", "PHP Vision", "Golang Vision"],
     "type": "framework",
@@ -16,7 +16,6 @@
     "authors": [
         {
             "name": "Elwira Perdana",
-            "social": "@elwiraperdana",
             "email": "elwira@visioniconic.com",
             "homepage": "https://github.com/visionframework/",
             "role": "developer"

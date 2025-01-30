@@ -1,7 +1,7 @@
 {
     "name": "vision-serve/vision",
     "description": "A fullstack multi project web framework with Hierarchical Model View Controller (HMVC) Multi Project, hybrid Golang restapi and PHP rendering Framework",
-    "keywords": ["Framework", "PHP", "Golang", "MVC", "hybrid Golang and PHP Framework", "Vision", "PHP Vision Framework", "Golang Vision Framework", "Vision Indonesia", "PHP Vision", "Golang Vision"],
+    "keywords": ["Framework", "PHP", "Golang", "HMVC", "hybrid Golang and PHP Framework", "Vision", "PHP Vision Framework", "Golang Vision Framework", "Vision Indonesia", "PHP Vision", "Golang Vision"],
     "type": "project",
     "license": "MIT",
     "homepage": "https://visioniconic.com",

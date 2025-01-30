@@ -25,7 +25,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/vision-serve/vision"
+            "url": "https://github.com/vision-serve/vision/"
         }
     ],
 
@@ -54,7 +54,6 @@
     "prefer-stable": true,
     "require": {
         "php": "^8.0",
-        "twig/twig": "^3.18",
-        "vision-serve/vision": "dev-main"
+        "twig/twig": "^3.18"
     }
 }

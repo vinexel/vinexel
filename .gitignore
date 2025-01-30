@@ -2,4 +2,5 @@
 app/visioniconic/.env
 
 # Ignore folder vendor yang ada di dalam folder system
-system/vendor/plugins/
+system/vendor/plugins/symfony
+system/vendor/plugins/twig

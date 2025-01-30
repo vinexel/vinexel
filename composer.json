@@ -50,8 +50,8 @@
         "vendor-dir": "system/vendor/plugins"
     },
 
-    "minimum-stability": "dev",
-    "prefer-stable": false,
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "require": {
         "php": "^8.0",
         "twig/twig": "^3.18"

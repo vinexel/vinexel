@@ -1,2 +1,5 @@
-/.env
-/vendor
+# Ignore .env file yang berada di dalam folder app/visioniconic
+app/visioniconic/.env
+
+# Ignore folder vendor yang ada di dalam folder system
+system/vendor/plugins/

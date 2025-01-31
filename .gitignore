@@ -4,5 +4,5 @@ app/visioniconic/.env
 # Ignore folder vendor yang ada di dalam folder system
 system/vendor/plugins/symfony
 system/vendor/plugins/twig
-system/frameworks/writeable/cache
-system/frameworks/writeable/logging
+system/framework/writeable/cache/visioniconic
+system/framework/writeable/logging/visioniconic

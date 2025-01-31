@@ -31,7 +31,8 @@ class ViewRenderer extends Rapid
 
         $loader = new FilesystemLoader($basePath);
         $this->twig = new Environment($loader, [
-            'cache' => VISION_DIR . DIRECTORY_SEPARATOR . ('system/framework/writeable/cache') . DIRECTORY_SEPARATOR . PROJECT_NAME . DIRECTORY_SEPARATOR,
+            // 'cache' => VISION_DIR . DIRECTORY_SEPARATOR . ('system/framework/writeable/cache') . DIRECTORY_SEPARATOR . PROJECT_NAME . DIRECTORY_SEPARATOR,
+            'cache' => false,
             'debug' => false,
         ]);
     }

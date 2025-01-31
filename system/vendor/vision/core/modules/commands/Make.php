@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Vision Framework Custom Autoload.
+ * Vinexel Framework.
  *
  * @package Vision
  * @author Elwira Perdana
@@ -13,119 +13,85 @@ namespace Iconic\Core\Modules\Commands;
 
 class Make
 {
-    // Method untuk membuat struktur proyek beserta file dasar
     public function createProject($projectName)
     {
         $projectDir = dirname(__DIR__, 6) . DIRECTORY_SEPARATOR . "app" . DIRECTORY_SEPARATOR . "{$projectName}" . DIRECTORY_SEPARATOR;
 
-        // Cek apakah direktori project ada, jika tidak buat direktori baru
         if (!is_dir($projectDir)) {
-            mkdir($projectDir, 0777, true); // true untuk membuat direktori secara rekursif
+            mkdir($projectDir, 0777, true);
             echo "Project folder {$projectName} created successfully.\n";
         } else {
             echo "Project {$projectName} already exists.\n";
             return;
         }
 
-        // Buat file dan folder dasar
         $this->createBaseFiles($projectName, $projectDir);
     }
 
-    // Method untuk membuat file dasar seperti .env dan menambahkan domain ke RegisterProjects.php
     protected function createBaseFiles($projectName, $projectDir)
     {
-        // Ubah huruf pertama projectName menjadi kapital
         $projectName = ucfirst($projectName);
 
-        // Buat file .env
         $envFile = "{$projectDir}.env";
         $envContent = "DB_HOST=localhost\nDB_NAME={$projectName}\nDB_USER=root\nDB_PASS=\n";
         file_put_contents($envFile, $envContent);
         echo "Created .env file at {$envFile}.\n";
 
-        // Buat file routes.php
         $routesFile = "{$projectDir}routes.php";
         $routesContent = "<?php\n\nuse use Vision\Modules\Router;\n\n// Example route\n\Router::add('GET', '/', 'HomeController@index');\n
 Router::add('GET', '/about', 'HomeController@about');\n";
         file_put_contents($routesFile, $routesContent);
         echo "Created routes.php file at {$routesFile}.\n";
 
-        // Buat folder untuk models, views, controllers
         $folders = ['models', 'views', 'controllers', 'views/layout'];
         foreach ($folders as $folder) {
             mkdir($projectDir . $folder, 0777, true);
             echo "Created folder {$folder} in {$projectDir}.\n";
         }
 
-        // Buat file contoh untuk model, controller, dan view
         $this->createController($projectName, 'Home');
         $this->createModel($projectName, 'ExampleModel');
         $this->createView($projectName, 'index');
-
-        // Buat BaseController dan BaseModel
         $this->createBaseController($projectName, $projectDir);
         $this->createBaseModel($projectName, $projectDir);
-
-        // Buat layout dasar
         $this->createBaseLayout($projectName, $projectDir);
 
-        // Cari port yang tersedia
         $availablePort = $this->findAvailablePort();
 
-        // Tambahkan domain ke RegisterProjects.php dengan port yang tersedia
         $this->addDomainToProjects('127.0.0.1', $availablePort, $projectName);
     }
 
-    // Method untuk menemukan port yang tersedia
     protected function findAvailablePort()
     {
         $usedPorts = [];
-
-        // Baca file RegisterProjects.php untuk mendapatkan port yang digunakan
         $projectsFile = dirname(__DIR__, 6) . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'RegisterProjects.php';
         $projectsContent = file_get_contents($projectsFile);
 
-        // Ambil semua port dari array $domainsToProjects
         preg_match_all("/'127\.0\.0\.1:(\d+)'/", $projectsContent, $matches);
         foreach ($matches[1] as $port) {
-            $usedPorts[] = (int)$port; // Simpan port yang digunakan
+            $usedPorts[] = (int)$port;
         }
 
-        // Cari port yang tersedia (misalnya dari 8000 hingga 8999)
         for ($port = 8000; $port <= 8999; $port++) {
             if (!in_array($port, $usedPorts)) {
-                return $port; // Kembalikan port yang pertama kali ditemukan
+                return $port;
             }
         }
 
-        // Jika tidak ada port yang tersedia, kembalikan null atau berikan pesan error
         die("No available ports found.\n");
     }
 
-    // Method untuk menambahkan domain dan port ke RegisterProjects.php
     protected function addDomainToProjects($domain, $port, $projectName)
     {
         $projectsFile = dirname(__DIR__, 6) . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'RegisterProjects.php';
-
-        // Baca konten file RegisterProjects.php
         $projectsContent = file_get_contents($projectsFile);
-
-        // Format domain lengkap (domain:port)
         $fullDomain = "{$domain}:{$port}";
 
-        // Periksa apakah domain sudah ada dalam file
         if (strpos($projectsContent, $fullDomain) === false) {
-            // Temukan posisi akhir dari array $domainsToProjects
             $insertPosition = strpos($projectsContent, '];');
-
-            // Buat entry baru untuk domain
             $newEntry = "        '{$fullDomain}' => '" . strtolower($projectName) . "',\n";
-
-
-            // Sisipkan entry baru sebelum penutup array
             $newContent = substr($projectsContent, 0, $insertPosition) . $newEntry . substr($projectsContent, $insertPosition);
 
-            // Tulis kembali konten file RegisterProjects.php
             file_put_contents($projectsFile, $newContent);
             echo "Added domain {$fullDomain} => {$projectName} to RegisterProjects.php.\n";
         } else {
@@ -133,10 +99,9 @@ Router::add('GET', '/about', 'HomeController@about');\n";
         }
     }
 
-    // Method untuk membuat BaseController.php
     protected function createBaseController($projectName, $projectDir)
     {
-        $projectName = ucfirst($projectName); // Pastikan huruf kapital pada nama project
+        $projectName = ucfirst($projectName);
         $baseControllerFile = "{$projectDir}controllers" . DIRECTORY_SEPARATOR . "BaseController.php";
         $baseControllerContent = "
         <?php
@@ -303,31 +268,27 @@ use Deeper\Traits\Malscan\ViewsTrait;
     }
         \n}\n";
         file_put_contents($baseControllerFile, $baseControllerContent);
-        echo "Created BaseController.php at {$baseControllerFile}.\n";
+        echo "Created BaseController.php\n";
     }
 
-    // Method untuk membuat BaseModel.php
     protected function createBaseModel($projectName, $projectDir)
     {
-        $projectName = ucfirst($projectName); // Pastikan huruf kapital pada nama project
+        $projectName = ucfirst($projectName);
         $baseModelFile = "{$projectDir}models" . DIRECTORY_SEPARATOR . "BaseModel.php";
         $baseModelContent = "<?php\n\nnamespace {$projectName}\\Models;\n\nclass BaseModel\n{\n    protected \$db;\n\n    public function __construct(\$db)\n    {\n        \$this->db = \$db;\n    }\n\n    // Base methods for models\n}\n";
         file_put_contents($baseModelFile, $baseModelContent);
-        echo "Created BaseModel.php at {$baseModelFile}.\n";
+        echo "Created BaseModel.php\n";
     }
 
-    // Method untuk membuat layout dasar dan folder layout
     protected function createBaseLayout($projectName, $projectDir)
     {
         $layoutDir = "{$projectDir}views" . DIRECTORY_SEPARATOR . "layouts" . DIRECTORY_SEPARATOR;
 
-        // Buat folder layout di dalam views
         if (!file_exists($layoutDir)) {
             mkdir($layoutDir, 0777, true);
-            echo "Created layout folder at {$layoutDir}.\n";
+            echo "Created layout folder\n";
         }
 
-        // Buat file layout dasar
         $layoutFile = "{$layoutDir}base_layout.rapid.php";
         $layoutContent = <<<'LAYOUT'
 <!DOCTYPE html>
@@ -357,10 +318,9 @@ use Deeper\Traits\Malscan\ViewsTrait;
 LAYOUT;
 
         file_put_contents($layoutFile, $layoutContent);
-        echo "Created base layout file at {$layoutFile}.\n";
+        echo "Created base layout file\n";
     }
 
-    // Method untuk membuat controller di dalam folder project yang sesuai
     public function createController($projectName, $controllerName)
     {
         $projectDir = dirname(__DIR__, 6) . DIRECTORY_SEPARATOR . "app" . DIRECTORY_SEPARATOR . "{$projectName}" . DIRECTORY_SEPARATOR . "Controllers";
@@ -379,7 +339,6 @@ LAYOUT;
         echo "Controller {$controllerName}Controller.php created successfully in project {$projectName}.\n";
     }
 
-    // Method untuk membuat model di dalam folder project yang sesuai
     public function createModel($projectName, $modelName)
     {
         $projectDir = dirname(__DIR__, 6) . DIRECTORY_SEPARATOR . "app" . DIRECTORY_SEPARATOR . "{$projectName}" . DIRECTORY_SEPARATOR . "Models";
@@ -398,7 +357,6 @@ LAYOUT;
         echo "Model {$modelName}.php created successfully in project {$projectName}.\n";
     }
 
-    // Method untuk membuat view di dalam folder project yang sesuai
     public function createView($projectName, $viewName)
     {
         $projectDir = dirname(__DIR__, 6) . DIRECTORY_SEPARATOR . "app" . DIRECTORY_SEPARATOR . "{$projectName}" . DIRECTORY_SEPARATOR . "Views";

@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Vinexel Framework.
+ *
+ * @package Vision
+ * @author Elwira Perdana
+ * @copyright (c) PT Iconic Wira Niaga
+ * @license MIT License
+ */
+
 namespace Iconic\Core\Modules\Commands;
 
 use Iconic\Core\Modules\Commands\Handler\Registry as CMD;
@@ -8,19 +17,17 @@ class Command
 {
     public function runCommand()
     {
-        global $argv; // Ambil $argv dari ruang lingkup global
+        global $argv;
 
         if (isset($argv[1])) {
             $commandName = $argv[1];
-            $arguments = array_slice($argv, 2); // Ambil argumen lainnya setelah perintah
-
-            // Ambil daftar command dari registry
+            $arguments = array_slice($argv, 2);
             $commands = CMD::getCommands();
 
             if (array_key_exists($commandName, $commands)) {
                 $commandClass = $commands[$commandName];
                 $commandInstance = new $commandClass();
-                $commandInstance->handle($arguments); // Memanggil metode handle dengan argumen
+                $commandInstance->handle($arguments);
             } else {
                 echo "\e[33mCommand not found!\n";
                 echo "Available commands:\n";

@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Vinexel Framework.
+ *
+ * @package Vision
+ * @author Elwira Perdana
+ * @copyright (c) PT Iconic Wira Niaga
+ * @license MIT License
+ */
+
 namespace Iconic\Core\Modules\Commands\Helpers;
 
 use System\Projects;
@@ -15,33 +24,29 @@ class DeleteProjectCommand
             return;
         }
 
-        // Konfirmasi penghapusan
         if (!$this->confirmDeletion($projectName)) {
             echo "Project deletion canceled.\n";
             return;
         }
 
-        // Hapus entri domain dari Projects.php
         $this->removeDomainFromProjects($projectName);
 
-        // Hapus folder project setelah domain dihapus
         $this->deleteProject($projectName);
 
-        // Hapus folder cache untuk project
         $this->deleteCache($projectName);
     }
 
     protected function confirmDeletion($projectName)
     {
         echo "Are you sure you want to delete the project '{$projectName}'? (yes/no): ";
-        $response = trim(fgets(STDIN)); // Membaca input dari pengguna
+        $response = trim(fgets(STDIN));
 
-        return strtolower($response) === 'yes'; // Kembalikan true jika input adalah 'yes'
+        return strtolower($response) === 'yes';
     }
 
     protected function deleteProject($projectName)
     {
-        $projectDir = dirname(__DIR__, 7) . "/app/{$projectName}/"; // Path ke folder project
+        $projectDir = dirname(__DIR__, 7) . "/app/{$projectName}/";
 
         // Hapus folder project
         if (is_dir($projectDir)) {
@@ -54,7 +59,7 @@ class DeleteProjectCommand
 
     protected function deleteCache($projectName)
     {
-        $cacheDir = dirname(__DIR__, 7) . "/system/framework/writeable/cache/{$projectName}/"; // Path ke folder cache
+        $cacheDir = dirname(__DIR__, 7) . "/system/framework/writeable/cache/{$projectName}/";
 
         // Hapus folder cache
         if (is_dir($cacheDir)) {
@@ -82,18 +87,15 @@ class DeleteProjectCommand
     {
         $projectsFilePath = dirname(__DIR__, 7) . '/app/RegisterProjects.php';
         $content = file_get_contents($projectsFilePath);
-        $domainToRemove = ''; // Domain yang akan dihapus akan ditentukan di sini
+        $domainToRemove = '';
 
-        // Dapatkan domain yang sesuai dengan project
         $pattern = '/(\s*\'(127\.0\.0\.1:\d+)\'\s*=>\s*\'' . preg_quote($projectName, '/') . '\'\s*,?\s*)/';
 
-        // Hapus entri domain yang sesuai
         $newContent = preg_replace($pattern, '', $content);
 
-        // Hanya menulis kembali file jika ada perubahan
         if ($content !== $newContent) {
             file_put_contents($projectsFilePath, $newContent);
-            echo "Removed domain entry for project: {$projectName} from Projects.php\n";
+            echo "Removed domain entry for project: {$projectName} from RegisterProjects.php\n";
         } else {
             echo "No domain entry found for project: {$projectName}\n";
         }

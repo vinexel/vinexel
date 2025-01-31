@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Vision Framework
+ *
+ * @package Vision
+ * @author Elwira Perdana
+ * @copyright (c) PT Iconic Wira Niaga
+ * @license MIT License
+ */
+
 namespace Visioniconic\Controllers;
 
 use Vision\Modules\Controller;

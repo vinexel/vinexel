@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Vision Framework
+ *
+ * @package Vision
+ * @author Elwira Perdana
+ * @copyright (c) PT Iconic Wira Niaga
+ * @license MIT License
+ */
+
 namespace Visioniconic\Services;
 
 use Vision\Modules\Container;
@@ -12,7 +21,6 @@ class ServiceProvider
      */
     public static function register()
     {
-        // Registrasi session service ke container
         Container::singleton('session', function () {
             return new Session();
         });

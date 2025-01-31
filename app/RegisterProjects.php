@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Vision Framework Index front controller.
+ * Vinexel Framework.
  *
  * @package Vision
  * @author Elwira Perdana

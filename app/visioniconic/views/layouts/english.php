@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="{{ viewport }}">
-    <title>{{ title }}</title>
+    <meta name="viewport" content="<?= $data['viewport'] ?>">
+    <title><?= $data['title'] ?></title>
     <link rel="preload" as="font" href="https://fonts.gstatic.com/s/chakrapetch/v11/cIf6MapbsEk7TDLdtEz1BwkWn6pg.woff2">
     <link rel="preload" as="font" href="https://fonts.gstatic.com/s/chakrapetch/v11/cIflMapbsEk7TDLdtEz1BwkeQI51R5_F.woff2">
     <link rel="preload" as="font" href="https://fonts.gstatic.com/s/outfit/v11/QGYvz_MVcBeNP4NJtEtq.woff2">
-    <meta name="description" content="{{ description }}">
+    <meta name="description" content="<?= $data['description'] ?>">
     <link rel="canonical" href="https://exacoat.com/">
 
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -99,12 +99,6 @@
                                                 </a>
                                             </li>
 
-                                            <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-441646" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-441646 nav-item dropdown d-lg-flex nav-item-display align-self-stretch overflow-visible align-items-center">
-                                                <a title="FAQs" class=" font-weight-bold secondary-font pix-nav-link text-body-default nav-link animate-in" target="_self" href="en" data-anim-type="fade-in-up">
-                                                    <span class="pix-dropdown-title text-sm  pix-header-text">English</span>
-                                                </a>
-                                            </li>
-
                                             <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-441648" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-441648 nav-item dropdown d-lg-flex nav-item-display align-self-stretch overflow-visible align-items-center">
                                                 <a title="Log in" class=" font-weight-bold secondary-font pix-nav-link text-body-default nav-link animate-in" target="_self" href="malscan" data-anim-type="fade-in-up">
                                                     <span class="pix-dropdown-title text-sm  pix-header-text">Log in</span>
@@ -139,7 +133,7 @@
         <div id="content" class="site-content bg-transparent pt-5">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main">
-                    {{ content | raw }}
+                    <?= $data['content'] ?>
                 </main>
             </div>
         </div>

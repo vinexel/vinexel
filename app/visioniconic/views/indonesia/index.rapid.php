@@ -3,7 +3,7 @@
         <div class="e-con-inner">
             <div class="elementor-element elementor-element-1519543 elementor-widget elementor-widget-heading">
                 <div class="elementor-widget-container">
-                    <h3 class="elementor-heading-title elementor-size-default">Where <b style="color: #f3aa18;">Vinexe</b> Meets Innovation.</h3>
+                    <h3 class="elementor-heading-title elementor-size-default">Where <b style="color: #f3aa18;">Vision</b> Meets Innovation.</h3>
                 </div>
             </div>
             <div class="elementor-element elementor-element-d69a755 e-con-full e-flex e-con e-child">
@@ -27,7 +27,7 @@
                     <div class="elementor-element elementor-element-7f529f0 elementor-widget__width-initial elementor-widget elementor-widget-heading">
                         <div class="elementor-widget-container">
                             <h1 class="elementor-heading-title elementor-size-medium">
-                                Why <b style="color: #f3aa18;">Vinexe?</b>
+                                Why <b style="color: #f3aa18;">Vision?</b>
                                 <br>Reason.
                             </h1>
                             <p>Scalability, Security, Simplicity multi project framework.</p>

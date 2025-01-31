@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Vision Framework.
+ * Vinexel Framework.
  *
  * @package Vision
  * @author Elwira Perdana
@@ -48,5 +48,5 @@ class SysCon
     }
 }
 
-$atoz = VISION_DIR . "/system/vendor/vision/fragment/kit/deeper/globals/environment/src/AtoZ.txt";
+$atoz = VISION_DIR . DIRECTORY_SEPARATOR . "system/vendor/vision/fragment/kit/deeper/globals/environment/src/AtoZ.txt";
 SysCon::load($atoz);

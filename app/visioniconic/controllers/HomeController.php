@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Vision Framework
+ * Vinexel Framework
  *
  * @package Vision
  * @author Elwira Perdana
@@ -23,7 +23,7 @@ class HomeController extends BaseController
     {
         try {
             $data = [
-                'title' => 'Vinexe™',
+                'title' => 'Vinexel™',
                 'viewport' => 'width=device-width, initial-scale=1, shrink-to-fit=no',
                 'author' => 'https://visioniconic.com',
                 'description' => 'Technology and Corporate',

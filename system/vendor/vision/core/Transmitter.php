@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Vision Framework Bootstrapping.
+ * Vinexel Framework Bootstrapping.
  *
  * @package Vision
  * @author Elwira Perdana

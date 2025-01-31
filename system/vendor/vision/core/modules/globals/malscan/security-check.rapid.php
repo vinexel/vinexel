@@ -6,10 +6,8 @@ head();
 	<div id="content-container">
 
 		<section class="content-header">
-			<!-- <h1><i class="fa fa-check"></i> Security Check</h1> -->
 			<ol class="breadcrumb">
 				<li class="active"><a href="malscan-check"> Security Check <i class="fa fa-check"></i></a> </li>
-				<!-- <li class="active">Security Check</li> -->
 			</ol>
 		</section>
 

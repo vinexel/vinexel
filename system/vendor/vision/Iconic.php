@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Vision Framework Autoload Function.
+ * Vinexel Framework Autoload Function.
  *
  * @package Vision
  * @author Elwira Perdana

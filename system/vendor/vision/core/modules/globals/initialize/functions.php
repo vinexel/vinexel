@@ -1,12 +1,13 @@
 <?php
 
 declare(strict_types=1);
+
 /**
- * Luminova Framework
+ * Vinexel Framework.
  *
- * @package Luminova
- * @author Ujah Chigozie Peter
- * @copyright (c) Nanoblock Technology Ltd
- * @license See LICENSE file
- * @see https://luminova.ng/docs/0.0.0/global/functions
+ * @package Vision
+ * @author Elwira Perdana
+ * @copyright (c) PT Iconic Wira Niaga
+ * @license MIT License
+ * @see https://vinexel.com/docs/global/functions
  */

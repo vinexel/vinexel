@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 /**
- * Vision Framework.
+ * Vinexel Framework.
  *
  * @package Vision
  * @author Elwira Perdana

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Vision Framework.
+ * Vinexel Framework.
  *
  * @package Vision
  * @author Elwira Perdana

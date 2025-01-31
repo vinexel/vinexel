@@ -1,6 +1,6 @@
-# Core Engine for VisionFramework
+# VINEXEL (Vivid Innovation for Excellence) Framework
 
-![VisionFramework Logo](https://visioniconic.com/assets/images/logo_icon/logo.png)
+![Vinexel Logo](https://visioniconic.com/assets/images/logo_icon/logo.png)
 
 A powerful core engine designed for Vision Framework, implemented with a robust architectural approach to streamline PHP development. This engine serves as the backbone for multiple projects, providing a flexible, scalable foundation for building custom solutions. By adhering to best practices in modular programming, dependency injection, and H-MVC architecture, the core engine ensures clean, maintainable, and efficient code across various applications.
 
@@ -32,5 +32,6 @@ composer create-project vision-serve/vision my-project
 ```
 
 ## 3. Configure Your Environment
+
 - **APP_ENV=local**
 - **APP_KEY=your-app-key**

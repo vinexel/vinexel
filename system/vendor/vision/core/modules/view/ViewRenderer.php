@@ -15,6 +15,7 @@ use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 use Vision\Modules\Requirements;
 use Deeper\Globals\Config\Src\SysCon as SC;
+use Vision\Modules\Config;
 use Exception;
 
 class ViewRenderer extends Rapid
@@ -38,23 +39,70 @@ class ViewRenderer extends Rapid
                 SC::get('M_D') .
                 SC::get('M_H'));
 
+        // Ambil nilai cache dari config/env dan pastikan hasilnya boolean
+        $enableCache = filter_var(Config::get('IS_CACHED', getenv('IS_CACHED') ?: false), FILTER_VALIDATE_BOOLEAN);
+
+        // Tentukan direktori cache hanya jika cache diaktifkan
+        $cachePath = $enableCache ?
+            VISION_DIR . DIRECTORY_SEPARATOR . 'system/framework/writeable/cache' . DIRECTORY_SEPARATOR . PROJECT_NAME . DIRECTORY_SEPARATOR
+            : false;
+
         $loader = new FilesystemLoader($basePath);
         $this->twig = new Environment($loader, [
-            // 'cache' => VISION_DIR . DIRECTORY_SEPARATOR . ('system/framework/writeable/cache') . DIRECTORY_SEPARATOR . PROJECT_NAME . DIRECTORY_SEPARATOR,
-            'cache' => false,
+            'cache' => $cachePath,
             'debug' => false,
         ]);
     }
 
     public function renderFile($file, $data)
     {
-        if (!$this->isRapidFile($file)) {
-            $file .= strtolower(Requirements::getRapid());
+        $isRapid = $this->isRapidFile($file);
+        $isPhp = $this->isPhpFile($file);
+
+        if ($isRapid || !$isPhp) {
+            // Coba render file dengan ekstensi Rapid
+            $rapidFile = strtolower($file) . strtolower(Requirements::getRapid());
+
+            try {
+                $template = $this->twig->load($rapidFile);
+                return $template->render($data);
+            } catch (\Twig\Error\LoaderError $e) {
+                // Jika file Rapid tidak ditemukan, lanjut ke pengecekan PHP
+            }
         }
 
-        $template = $this->twig->load($file);
-        return $template->render($data);
+        if ($isPhp || !$isRapid) {
+            // Render sebagai file PHP
+            $fullPath = VISION_DIR . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . PROJECT_NAME . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . ltrim($file, DIRECTORY_SEPARATOR);
+
+            if (!str_ends_with($fullPath, '.php')) {
+                $fullPath .= '.php';
+            }
+
+            if (!file_exists($fullPath)) {
+                throw new \Exception("File tidak ditemukan: " . $fullPath);
+            }
+
+            $content = file_get_contents($fullPath);
+            $parsedContent = RapidParser::parse($content);
+
+            extract($data, EXTR_OVERWRITE);
+            ob_start();
+
+            try {
+                eval('?>' . $parsedContent);
+            } catch (\Throwable $e) {
+                ob_end_clean();
+                throw new \Exception("Kesalahan saat memproses template: " . $e->getMessage());
+            }
+
+            return ob_get_clean();
+        }
+
+        throw new \Exception("Format file tidak dikenali: " . $file);
     }
+
+
 
     public function getViewPath($project, $view)
     {
@@ -62,7 +110,7 @@ class ViewRenderer extends Rapid
         $viewFile = array_pop($viewParts);
         $subfolderPath = implode(DIRECTORY_SEPARATOR, $viewParts);
 
-        return $subfolderPath . DIRECTORY_SEPARATOR . $viewFile . strtolower(Requirements::getRapid());
+        return $subfolderPath . DIRECTORY_SEPARATOR . $viewFile;
     }
 
     public function getLayoutPath($project, $layout)
@@ -71,11 +119,16 @@ class ViewRenderer extends Rapid
         $layoutFile = array_pop($layoutParts);
         $subfolderPath = implode(DIRECTORY_SEPARATOR, $layoutParts);
 
-        return $subfolderPath . DIRECTORY_SEPARATOR . $layoutFile . strtolower(Requirements::getRapid());
+        return $subfolderPath . DIRECTORY_SEPARATOR . $layoutFile;
     }
 
     private function isRapidFile($file)
     {
         return substr($file, -10) === strtolower(Requirements::getRapid());
+    }
+
+    private function isPhpFile($file)
+    {
+        return substr($file, -4) === strtolower(Requirements::getPhp());
     }
 }

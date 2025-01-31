@@ -41,7 +41,7 @@ class DeleteProjectCommand
 
     protected function deleteProject($projectName)
     {
-        $projectDir = __DIR__ . "/../../../../../_app/{$projectName}/"; // Path ke folder project
+        $projectDir = dirname(__DIR__, 7) . "/app/{$projectName}/"; // Path ke folder project
 
         // Hapus folder project
         if (is_dir($projectDir)) {
@@ -54,7 +54,7 @@ class DeleteProjectCommand
 
     protected function deleteCache($projectName)
     {
-        $cacheDir = __DIR__ . "/../../../../../_system/cache/{$projectName}/"; // Path ke folder cache
+        $cacheDir = dirname(__DIR__, 7) . "/system/framework/writeable/cache/{$projectName}/"; // Path ke folder cache
 
         // Hapus folder cache
         if (is_dir($cacheDir)) {
@@ -80,7 +80,7 @@ class DeleteProjectCommand
 
     protected function removeDomainFromProjects($projectName)
     {
-        $projectsFilePath = __DIR__ . '/../../../../../_system/helpers/Projects.php';
+        $projectsFilePath = dirname(__DIR__, 7) . '/app/RegisterProjects.php';
         $content = file_get_contents($projectsFilePath);
         $domainToRemove = ''; // Domain yang akan dihapus akan ditentukan di sini
 

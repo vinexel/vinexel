@@ -73,7 +73,15 @@ class ViewRenderer extends Rapid
 
         if ($isPhp || !$isRapid) {
             // Render sebagai file PHP
-            $fullPath = VISION_DIR . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . PROJECT_NAME . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . ltrim($file, DIRECTORY_SEPARATOR);
+            $fullPath = VISION_DIR
+                . DIRECTORY_SEPARATOR
+                . 'app'
+                . DIRECTORY_SEPARATOR
+                . PROJECT_NAME
+                . DIRECTORY_SEPARATOR
+                . 'views'
+                . DIRECTORY_SEPARATOR
+                . ltrim($file, DIRECTORY_SEPARATOR);
 
             if (!str_ends_with($fullPath, '.php')) {
                 $fullPath .= '.php';

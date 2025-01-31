@@ -15,7 +15,7 @@ class RapidParser
 {
     public static function parse($template)
     {
-        // Change {{ variable }}
+        // Change with {{ $variable }}
         $template = preg_replace('/\{\{\s*(.+?)\s*\}\}/', '<?php echo $1; ?>', $template);
 
         // Handle Rapid like @if, @foreach, etc.

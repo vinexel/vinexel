@@ -2,8 +2,7 @@
 app/visioniconic/.env
 
 # Ignore folder vendor yang ada di dalam folder system
-system/vendor/plugins/symfony
-system/vendor/plugins/twig
-system/vendor/plugins/vinexel
+vendor/
+system/vendor/plugins/
 system/framework/writeable/cache
 system/framework/writeable/logging

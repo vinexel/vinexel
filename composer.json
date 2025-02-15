@@ -53,6 +53,7 @@
 
     "require": {
         "php": "^8.0",
+        "twig/twig": "^3.19",
         "vinexel/vision-serve": "1.0.0"
     }
 }

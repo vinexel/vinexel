@@ -1,0 +1,16 @@
+{
+    "name": "vinexel/vision-serve",
+    "description": "Core of Vinexel Framework",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Elwira Perdana"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.0",
+        "twig/twig": "^3.19"
+    }
+}

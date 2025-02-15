@@ -27,7 +27,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/vision-serve/vision"
+            "url": "https://github.com/vinexel/vision-serve"
         }
     ],
 
@@ -53,7 +53,6 @@
 
     "require": {
         "php": "^8.0",
-        "vinexel/vision-serve": "1.0.0",
-        "twig/twig": "^3.19"
+        "vinexel/vision-serve": "^1.0"
     }
 }

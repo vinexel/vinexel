@@ -1,4 +1,10 @@
 /*! vinexel framework - v1.0.0 - 10-09-2024 */
+@media (max-width:998px) {
+    .vin__frontend {
+        margin-top: -5rem;
+    }
+}
+
 .vin__frontend-hidden {
     display: none
 }

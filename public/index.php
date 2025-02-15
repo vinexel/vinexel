@@ -12,12 +12,9 @@
 use \Iconic\Core\Transmitter;
 
 ob_start();
-
 define('VISION_START', microtime(true));
-define('VISION_DIR', dirname(__DIR__));
 
-$file =
-    VISION_DIR
+$file = dirname(__DIR__)
     . DIRECTORY_SEPARATOR
     . 'system'
     . DIRECTORY_SEPARATOR
@@ -33,5 +30,4 @@ if (file_exists($file)) {
 }
 
 Transmitter::http()->run;
-
 ob_end_flush();

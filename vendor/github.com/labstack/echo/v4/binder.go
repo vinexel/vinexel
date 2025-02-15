@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// SPDX-FileCopyrightText: © 2015 LabStack LLC and Echo contributors
+
 package echo
 
 import (
@@ -66,9 +69,9 @@ import (
 type BindingError struct {
 	// Field is the field name where value binding failed
 	Field string `json:"field"`
+	*HTTPError
 	// Values of parameter that failed to bind.
 	Values []string `json:"-"`
-	*HTTPError
 }
 
 // NewBindingError creates new instance of binding error
@@ -91,16 +94,15 @@ func (be *BindingError) Error() string {
 
 // ValueBinder provides utility methods for binding query or path parameter to various Go built-in types
 type ValueBinder struct {
-	// failFast is flag for binding methods to return without attempting to bind when previous binding already failed
-	failFast bool
-	errors   []error
-
 	// ValueFunc is used to get single parameter (first) value from request
 	ValueFunc func(sourceParam string) string
 	// ValuesFunc is used to get all values for parameter from request. i.e. `/api/search?ids=1&ids=2`
 	ValuesFunc func(sourceParam string) []string
 	// ErrorFunc is used to create errors. Allows you to use your own error type, that for example marshals to your specific json response
 	ErrorFunc func(sourceParam string, values []string, message interface{}, internalError error) error
+	errors    []error
+	// failFast is flag for binding methods to return without attempting to bind when previous binding already failed
+	failFast bool
 }
 
 // QueryParamsBinder creates query parameter value binder
@@ -1323,7 +1325,7 @@ func (b *ValueBinder) unixTime(sourceParam string, dest *time.Time, valueMustExi
 	case time.Second:
 		*dest = time.Unix(n, 0)
 	case time.Millisecond:
-		*dest = time.Unix(n/1e3, (n%1e3)*1e6) // TODO: time.UnixMilli(n) exists since Go1.17 switch to that when min version allows
+		*dest = time.UnixMilli(n)
 	case time.Nanosecond:
 		*dest = time.Unix(0, n)
 	}

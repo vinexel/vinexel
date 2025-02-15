@@ -49,25 +49,33 @@ final class Transmitter
     public static function run(): void
     {
         require_once
-            __DIR__
+            dirname(__DIR__, 2)
             . DIRECTORY_SEPARATOR
-            . 'modules'
+            . 'plugins'
             . DIRECTORY_SEPARATOR
-            . 'globals'
+            . 'vinexel'
             . DIRECTORY_SEPARATOR
-            . 'initialize'
+            . ucfirst('modules')
             . DIRECTORY_SEPARATOR
-            . 'constants.php';
+            . ucfirst('globals')
+            . DIRECTORY_SEPARATOR
+            . ucfirst('initialize')
+            . DIRECTORY_SEPARATOR
+            . 'Constants.php';
         require_once
-            __DIR__
+            dirname(__DIR__, 2)
             . DIRECTORY_SEPARATOR
-            . 'modules'
+            . 'plugins'
             . DIRECTORY_SEPARATOR
-            . 'globals'
+            . 'vinexel'
             . DIRECTORY_SEPARATOR
-            . 'initialize'
+            . ucfirst('modules')
             . DIRECTORY_SEPARATOR
-            . 'functions.php';
+            . ucfirst('globals')
+            . DIRECTORY_SEPARATOR
+            . ucfirst('initialize')
+            . DIRECTORY_SEPARATOR
+            . 'Functions.php';
     }
 
     /**
@@ -85,16 +93,19 @@ final class Transmitter
             . DIRECTORY_SEPARATOR
             . 'autoload.php';
         require_once
-            __DIR__
+            dirname(__DIR__, 2)
             . DIRECTORY_SEPARATOR
-            . 'modules'
+            . 'plugins'
             . DIRECTORY_SEPARATOR
-            . 'globals'
+            . 'vinexel'
             . DIRECTORY_SEPARATOR
-            . 'initialize'
+            . ucfirst('modules')
             . DIRECTORY_SEPARATOR
-            . 'features.php';
-        defined('IS_UP') || define('IS_UP', true);
+            . ucfirst('globals')
+            . DIRECTORY_SEPARATOR
+            . ucfirst('initialize')
+            . DIRECTORY_SEPARATOR
+            . 'Features.php';
     }
 }
 Transmitter::run();

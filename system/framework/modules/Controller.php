@@ -11,7 +11,7 @@
 
 namespace Vision\Modules;
 
-use Iconic\Core\Modules\Controller\Controller as BaseController;
+use Vinexel\Modules\Controller\Controller as BaseController;
 
 class Controller extends BaseController
 {

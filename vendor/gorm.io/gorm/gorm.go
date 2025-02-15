@@ -4,6 +4,7 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
+	"reflect"
 	"sort"
 	"sync"
 	"time"
@@ -49,6 +50,8 @@ type Config struct {
 	CreateBatchSize int
 	// TranslateError enabling error translation
 	TranslateError bool
+	// PropagateUnscoped propagate Unscoped to every other nested statement
+	PropagateUnscoped bool
 
 	// ClauseBuilders clause builder
 	ClauseBuilders map[string]clause.ClauseBuilder
@@ -109,6 +112,7 @@ type Session struct {
 	DisableNestedTransaction bool
 	AllowGlobalUpdate        bool
 	FullSaveAssociations     bool
+	PropagateUnscoped        bool
 	QueryFields              bool
 	Context                  context.Context
 	Logger                   logger.Interface
@@ -181,7 +185,7 @@ func Open(dialector Dialector, opts ...Option) (db *DB, err error) {
 		err = config.Dialector.Initialize(db)
 
 		if err != nil {
-			if db, err := db.DB(); err == nil {
+			if db, _ := db.DB(); db != nil {
 				_ = db.Close()
 			}
 		}
@@ -238,6 +242,10 @@ func (db *DB) Session(config *Session) *DB {
 
 	if config.FullSaveAssociations {
 		txConfig.FullSaveAssociations = true
+	}
+
+	if config.PropagateUnscoped {
+		txConfig.PropagateUnscoped = true
 	}
 
 	if config.Context != nil || config.PrepareStmt || config.SkipHooks {
@@ -374,9 +382,11 @@ func (db *DB) AddError(err error) error {
 // DB returns `*sql.DB`
 func (db *DB) DB() (*sql.DB, error) {
 	connPool := db.ConnPool
-
-	if connector, ok := connPool.(GetDBConnectorWithContext); ok && connector != nil {
-		return connector.GetDBConnWithContext(db)
+	if db.Statement != nil && db.Statement.ConnPool != nil {
+		connPool = db.Statement.ConnPool
+	}
+	if tx, ok := connPool.(*sql.Tx); ok && tx != nil {
+		return (*sql.DB)(reflect.ValueOf(tx).Elem().FieldByName("db").UnsafePointer()), nil
 	}
 
 	if dbConnector, ok := connPool.(GetDBConnector); ok && dbConnector != nil {
@@ -405,6 +415,9 @@ func (db *DB) getInstance() *DB {
 				Clauses:   map[string]clause.Clause{},
 				Vars:      make([]interface{}, 0, 8),
 				SkipHooks: db.Statement.SkipHooks,
+			}
+			if db.Config.PropagateUnscoped {
+				tx.Statement.Unscoped = db.Statement.Unscoped
 			}
 		} else {
 			// with clone statement

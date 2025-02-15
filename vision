@@ -11,18 +11,12 @@
  */
 
 /*********************************************************************************************************
- *      "php vision serve" untuk memulai server atau "php vision list" melihat perintah yang ada.        *
- *      "php vision serve" secara default tanpa argumen untuk mulai proyek default pada port 8000.       *
- *      "php vision serve {port}" dengan argumen untuk memulai proyek spesifik yang diinginkan.          *
- * 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- *
  *      use the "php vision serve" to start server or "php vision list" to see the available commands.   *
  *      "php vision serve" by default with no arguments to start default project at port 8000.           *
  *      "php vision serve {port}" with argument to start specific project you want.                      *
  *********************************************************************************************************/
 
-use Iconic\Core\Modules\Commands\Command;
+use \Vinexel\Modules\Commands\Command;
 
 define('VISION_START', microtime(true));
 

@@ -11,8 +11,8 @@
 
 namespace Vision\Modules;
 
-use Iconic\Core\Modules\Database\DatabaseConnection;
-use Iconic\Core\Modules\Database\QueryBuilder;
+use Vinexel\Modules\Database\DatabaseConnection;
+use Vinexel\Modules\Database\QueryBuilder;
 
 class Database
 {

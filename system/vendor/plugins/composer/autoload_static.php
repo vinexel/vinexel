@@ -34,10 +34,6 @@ class ComposerStaticInit402a13b4383621c7c676a039801c92fe
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
         ),
-        'D' => 
-        array (
-            'Deeper\\' => 7,
-        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -72,10 +68,6 @@ class ComposerStaticInit402a13b4383621c7c676a039801c92fe
         'Symfony\\Polyfill\\Ctype\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
-        ),
-        'Deeper\\' => 
-        array (
-            0 => __DIR__ . '/../../../..' . '/system/vendor/vision/fragment/kit/deeper',
         ),
         'App\\' => 
         array (

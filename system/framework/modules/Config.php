@@ -11,7 +11,7 @@
 
 namespace Vision\Modules;
 
-use Iconic\Core\Modules\Config\Config as ConfigModule;
+use Vinexel\Modules\Config\Config as ConfigModule;
 use Deeper\Globals\Config\Src\SysCon as SC;
 use Exception;
 

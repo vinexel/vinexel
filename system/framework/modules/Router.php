@@ -11,7 +11,7 @@
 
 namespace Vision\Modules;
 
-use Iconic\Core\Modules\Router\Router as BaseRouter;
+use Vinexel\Modules\Router\Router as BaseRouter;
 
 class Router
 {
@@ -66,7 +66,7 @@ class Router
      * @param string $defaultMethod
      * @param array $defaultParams
      */
-    public static function dispatch($defaultController = 'App\\' . PROJECT_NAME . '\\Controllers\\HomeController', $defaultMethod = 'index', $defaultParams = [])
+    public static function dispatch($defaultController = 'app\\' . PROJECT_NAME . '\\Controllers\\HomeController', $defaultMethod = 'index', $defaultParams = [])
     {
         BaseRouter::dispatch($defaultController, $defaultMethod, $defaultParams);
     }

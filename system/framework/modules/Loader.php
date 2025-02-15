@@ -11,7 +11,7 @@
 
 namespace Vision\Modules;
 
-use Iconic\Core\Modules\Config\Loader as VisionLoader;
+use Vinexel\Modules\Config\Loader as VisionLoader;
 
 class Loader
 {

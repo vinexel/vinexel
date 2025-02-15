@@ -11,7 +11,7 @@
 
 namespace Vision;
 
-use \Iconic\Core\Modules\RegisterModule;
+use \Vinexel\Modules\RegisterModule;
 
 class Application extends RegisterModule
 {
@@ -24,11 +24,6 @@ class Application extends RegisterModule
      * {@inheritdoc}
      */
     protected function onFinish(array $info): void {}
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function onContextInstalled(string $context): void {}
 
     /**
      * {@inheritdoc}

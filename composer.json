@@ -35,8 +35,7 @@
         "psr-4": {
             "App\\": "app/",
             "System\\": "system/",
-            "Vision\\": "system/framework/",
-            "Deeper\\": "system/vendor/vision/fragment/kit/deeper/"
+            "Vision\\": "system/framework/"
         }
     },
 
@@ -54,6 +53,7 @@
 
     "require": {
         "php": "^8.0",
+        "vinexel/vision-serve": "1.0.0",
         "twig/twig": "^3.19"
     }
 }

@@ -11,7 +11,7 @@
 
 namespace Vision\Modules;
 
-use Iconic\Core\Modules\Container\Container as VisionContainer;
+use Vinexel\Modules\Container\Container as VisionContainer;
 use Vision\Modules\Database;
 
 class Container

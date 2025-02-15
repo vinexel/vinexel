@@ -11,7 +11,7 @@
 
 namespace Vision\Modules;
 
-use Iconic\Core\Modules\Config\Requirements as IconicRequirements;
+use Vinexel\Modules\Config\Requirements as IconicRequirements;
 
 class Requirements
 {

@@ -11,8 +11,8 @@
 
 namespace System;
 
-use App\RegisterProjects;
-use Iconic\Core\Modules\Config\Projects as URL;
+use \App\RegisterProjects;
+use \Vinexel\Modules\Config\Projects as URL;
 
 class Projects
 {

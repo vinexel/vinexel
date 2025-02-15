@@ -3,12 +3,16 @@
     "description": "Core of Vinexel Framework",
     "type": "library",
     "license": "MIT",
+    "version": "1.0.0",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+
     "authors": [
         {
             "name": "Elwira Perdana"
         }
     ],
-    "minimum-stability": "dev",
+
     "require": {
         "php": "^8.0",
         "twig/twig": "^3.19"

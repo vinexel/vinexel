@@ -53,6 +53,6 @@
 
     "require": {
         "php": "^8.0",
-        "vinexel/vision-serve": "^1.0"
+        "vinexel/vision-serve": "1.0.0"
     }
 }

@@ -4,7 +4,6 @@ composer.lock
 go.sum
 
 # Ignore folders
-vendor/
 system/vendor/plugins/
 system/storage/cache
 system/storage/logging

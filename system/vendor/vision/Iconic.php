@@ -12,7 +12,7 @@
 spl_autoload_register(function ($class) {
     $prefixes = [
         'Iconic\\'  => __DIR__ . DIRECTORY_SEPARATOR,
-        // 'Vinexel\\'  => dirname(__DIR__, 1) . DIRECTORY_SEPARATOR . strtolower('plugins') . DIRECTORY_SEPARATOR . strtolower('vinexel') . DIRECTORY_SEPARATOR . strtolower('vision-serve') . DIRECTORY_SEPARATOR . strtolower('core') . DIRECTORY_SEPARATOR,
+        'Vinexel\\'  => dirname(__DIR__, 1) . DIRECTORY_SEPARATOR . strtolower('plugins') . DIRECTORY_SEPARATOR . strtolower('vinexel') . DIRECTORY_SEPARATOR . strtolower('vision-serve') . DIRECTORY_SEPARATOR . strtolower('core') . DIRECTORY_SEPARATOR,
         'Deeper\\'  => dirname(__DIR__, 1) . DIRECTORY_SEPARATOR . strtolower('plugins') . DIRECTORY_SEPARATOR . strtolower('vinexel') . DIRECTORY_SEPARATOR . strtolower('vision-serve') . DIRECTORY_SEPARATOR . strtolower('core') . DIRECTORY_SEPARATOR . ucfirst('fragments') . DIRECTORY_SEPARATOR . ucfirst('kit') . DIRECTORY_SEPARATOR . ucfirst('deeper') . DIRECTORY_SEPARATOR,
     ];
 

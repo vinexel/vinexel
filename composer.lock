@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fbe99c81eff0a689ed30acbac0c054ec",
+    "content-hash": "7061112fd2d686cec4ef0e488f2ffbb5",
     "packages": [
         {
             "name": "symfony/deprecation-contracts",
@@ -317,18 +317,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vinexel/vision-serve.git",
-                "reference": "f021b2090072ebf74acec1c36185de09bedc3621"
+                "reference": "d388decbbde65eab9518d8ed1be6b5c6efa3ee62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vinexel/vision-serve/zipball/f021b2090072ebf74acec1c36185de09bedc3621",
-                "reference": "f021b2090072ebf74acec1c36185de09bedc3621",
+                "url": "https://api.github.com/repos/vinexel/vision-serve/zipball/d388decbbde65eab9518d8ed1be6b5c6efa3ee62",
+                "reference": "d388decbbde65eab9518d8ed1be6b5c6efa3ee62",
                 "shasum": ""
+            },
+            "require": {
+                "php": "^8.0",
+                "twig/twig": "^3.19"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Vinexel\\": "/"
+                    "Vinexel\\": "vision-serve/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -337,15 +341,20 @@
             ],
             "authors": [
                 {
-                    "name": "Elwira Perdana"
+                    "name": "Elwira Perdana",
+                    "email": "elwira@visioniconic.com",
+                    "homepage": "https://github.com/vinexel/",
+                    "role": "Lead Developer"
                 }
             ],
             "description": "Core of Vinexel Framework",
             "support": {
+                "docs": "https://vinexel.com/docs",
+                "email": "help@visioniconic.com",
                 "issues": "https://github.com/vinexel/vision-serve/issues",
-                "source": "https://github.com/vinexel/vision-serve/tree/1.0.0"
+                "source": "https://github.com/vinexel/vision-serve/tree/v1.0.0"
             },
-            "time": "2025-02-15T20:34:20+00:00"
+            "time": "2025-02-16T21:33:16+00:00"
         }
     ],
     "packages-dev": [],

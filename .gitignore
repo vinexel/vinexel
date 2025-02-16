@@ -1,5 +1,6 @@
 # Ignore files
 app/Elwira/.env
+composer.lock
 go.sum
 
 # Ignore folders

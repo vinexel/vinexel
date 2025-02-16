@@ -12,7 +12,6 @@
 namespace Vision\Modules;
 
 use Vinexel\Modules\Config\Config as ConfigModule;
-use Deeper\Globals\Config\Src\SysCon as SC;
 use Exception;
 
 class Config
@@ -69,9 +68,9 @@ class Config
 $envFilePath =
     VISION_DIR .
     DIRECTORY_SEPARATOR .
-    "app" .
+    strtolower('app') .
     DIRECTORY_SEPARATOR .
     PROJECT_NAME .
     DIRECTORY_SEPARATOR .
-    ".env";
+    strtolower('.env');
 Config::loadEnv($envFilePath);

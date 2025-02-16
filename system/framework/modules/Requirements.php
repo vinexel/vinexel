@@ -16,7 +16,7 @@ use Vinexel\Modules\Config\Requirements as IconicRequirements;
 class Requirements
 {
     /**
-     * Memeriksa apakah versi PHP memenuhi persyaratan minimum
+     * Checking PHP version
      */
     public static function MinVersion()
     {
@@ -24,7 +24,7 @@ class Requirements
     }
 
     /**
-     * Mendapatkan ekstensi PHP
+     * Get PHP
      *
      * @return string
      */
@@ -34,7 +34,7 @@ class Requirements
     }
 
     /**
-     * Mendapatkan ekstensi Rapid
+     * Get Rapid
      *
      * @return string
      */

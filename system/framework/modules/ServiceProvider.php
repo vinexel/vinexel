@@ -18,21 +18,21 @@ use Deeper\Libraries\Session;
 class ServiceProvider
 {
     /**
-     * Mendaftarkan semua layanan yang diperlukan.
+     * Register all service needed
      */
     public static function register()
     {
-        // Registrasi session service ke container
+        // Register session
         Container::singleton('session', function () {
             return new Session();
         });
 
-        // Registrasi database service ke container
+        // Register database
         Container::singleton('database', function () {
             return new Database();
         });
 
-        // Additional function
+        // Additional metrix function
         Container::singleton('metrix', function () {
             $execTime = microtime(true) - VISION_START;
             $execTimeInS = $execTime / 1;

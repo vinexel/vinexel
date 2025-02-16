@@ -9,7 +9,7 @@
  * @license MIT License
  */
 
-use \Iconic\Core\Transmitter;
+use \Iconic\Bootstrap\Transmitter;
 
 ob_start();
 define('VISION_START', microtime(true));

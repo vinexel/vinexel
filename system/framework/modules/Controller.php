@@ -18,11 +18,10 @@ class Controller extends BaseController
     public function __construct()
     {
         parent::__construct();
-        // Tambahkan inisialisasi atau logika tambahan jika diperlukan
     }
 
     /**
-     * Render view dengan tambahan logika atau fitur khusus untuk namespace sekunder.
+     * Render view.
      *
      * @param string $layout
      * @param string $view

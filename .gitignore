@@ -1,8 +1,9 @@
-# Ignore .env file yang berada di dalam folder app/visioniconic
-app/visioniconic/.env
+# Ignore files
+app/Elwira/.env
+go.sum
 
-# Ignore folder vendor yang ada di dalam folder system
+# Ignore folders
 vendor/
 system/vendor/plugins/
-system/framework/writeable/cache
-system/framework/writeable/logging
+system/storage/cache
+system/storage/logging

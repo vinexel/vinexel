@@ -14,5 +14,13 @@ use \Vision\Modules\Router;
 // Add your routes
 Router::add('GET', '/', 'HomeController@index');
 Router::add('GET', '/tentang', 'HomeController@tentang');
-Router::add('GET', '/en', 'HomeController@english');
-Router::add('GET', '/about', 'HomeController@about');
+
+// Example EN routes
+$enRoutes = [
+    '/en' => 'HomeController@english',
+    '/about' => 'HomeController@about',
+];
+
+foreach ($enRoutes as $path => $action) {
+    Router::add('GET', $path, $action);
+}

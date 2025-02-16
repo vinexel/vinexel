@@ -20,7 +20,6 @@ class Loader
      */
     public static function ProjectLoader()
     {
-        // Panggil Loader dari Vision\Core\Modules\Loader
         VisionLoader::ProjectLoader();
     }
 }

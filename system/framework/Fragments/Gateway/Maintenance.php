@@ -25,6 +25,8 @@ if ($maintenanceMode === '1' || $maintenanceMode === 'true') {
         . DIRECTORY_SEPARATOR
         . "vinexel"
         . DIRECTORY_SEPARATOR
+        . "vision-serve"
+        . DIRECTORY_SEPARATOR
         . ucfirst("modules")
         . DIRECTORY_SEPARATOR
         . ucfirst("config")

@@ -21,8 +21,8 @@ class Database
 
     public function __construct()
     {
-        $this->dbConnection = new DatabaseConnection(); // Koneksi database
-        $this->queryBuilder = new QueryBuilder($this->dbConnection); // Query builder yang mengakses koneksi
+        $this->dbConnection = new DatabaseConnection(); // Database connection
+        $this->queryBuilder = new QueryBuilder($this->dbConnection); // Query builder
     }
 
     public function query($query)

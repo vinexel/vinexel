@@ -16,7 +16,7 @@ use Vinexel\Modules\Router\Router as BaseRouter;
 class Router
 {
     /**
-     * Set namespace untuk controller.
+     * Set namespace for controller.
      *
      * @param string $namespace
      */
@@ -26,7 +26,7 @@ class Router
     }
 
     /**
-     * Set namespace untuk model.
+     * Set namespace for model.
      *
      * @param string $namespace
      */
@@ -36,7 +36,7 @@ class Router
     }
 
     /**
-     * Tambahkan route baru.
+     * Add new route.
      *
      * @param string $method
      * @param string $uri
@@ -49,7 +49,7 @@ class Router
     }
 
     /**
-     * Tambahkan grup rute.
+     * Add route group.
      *
      * @param array $attributes
      * @param callable $callback
@@ -60,7 +60,7 @@ class Router
     }
 
     /**
-     * Jalankan routing.
+     * Run routing.
      *
      * @param string $defaultController
      * @param string $defaultMethod

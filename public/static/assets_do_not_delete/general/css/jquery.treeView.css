@@ -1,0 +1,64 @@
+.treeview,
+.treeview ul {
+	list-style-type: none;
+	overflow: hidden;
+}
+
+.treeview ul {
+	padding-top: 15px;
+	border-left: 1px dashed #999;
+}
+
+.treeview ul li {
+	position: relative;
+}
+
+.treeview ul li::before {
+	position: absolute;
+	content: '';
+	width: 15px;
+	height: 0px;
+	left: 0;
+	top: 42%;
+	border-top: 1px dashed #999;
+}
+
+.treeview ul li.contains-items::before {
+	display: none;
+}
+
+.treeview li {
+	text-indent: 1%;
+	margin-top: 0.2em;
+	padding: 0.15em 0 0.5em 1.5em;
+	line-height: 22px;
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	color: hsl(var(--heading-color));
+}
+
+.treeview li.contains-items {
+	background-image: url('icons/arrow-left.png');
+}
+
+.treeview li.items-expanded {
+	background-image: url('icons/arrow-down.png');
+}
+
+.treeview>li:hover {
+	cursor: pointer;
+	background-size: 24px 24px;
+}
+
+.treeview span.has-node-icon {
+	text-indent: 2%;
+	margin-top: 0.2em;
+	padding: 0.15em 0 0.5em 2.0em;
+	line-height: 22px;
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+}
+
+.treeview span:not(span.has-node-icon):hover {
+	background-color: rgba(246, 246, 246, 0.7);
+}

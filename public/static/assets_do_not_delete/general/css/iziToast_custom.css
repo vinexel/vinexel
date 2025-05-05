@@ -1,0 +1,93 @@
+.iziToast-wrapper {
+     gap: 5px;
+}
+
+.iziToast {
+     box-shadow: 0 0 8px 2px #00000012;
+     border-radius: 10px;
+     overflow: hidden;
+     padding: 20px 45px 20px 0;
+}
+
+.iziToast>.iziToast-body {
+     position: unset;
+     padding: unset;
+     height: unset;
+     min-height: unset;
+     margin: unset;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+     padding-left: 20px !important;
+
+}
+
+.iziToast:after {
+     box-shadow: none;
+}
+
+.iziToast>.iziToast-body .iziToast-icon {
+     position: unset;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 18px;
+     line-height: 1;
+     margin-top: unset;
+     width: unset;
+     height: unset;
+}
+
+.iziToast .iziToast-icon {
+     border-radius: 10px;
+     padding: 10px;
+}
+
+.iziToast.iziToast-color-green .iziToast-icon {
+     background: #28c76f31;
+}
+
+.iziToast.iziToast-color-red .iziToast-icon {
+     background: #eb222231;
+}
+
+.iziToast.iziToast-color-blue .iziToast-icon {
+     background: #1e9ff231;
+}
+
+.iziToast.iziToast-color-orange .iziToast-icon {
+     background: #ff9f4331;
+}
+
+
+.iziToast>.iziToast-body .iziToast-texts {
+     margin: 0;
+     padding-right: 0;
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+}
+
+.iziToast>.iziToast-body .iziToast-message {
+     margin: 0;
+}
+
+
+.iziToast>.iziToast-close {
+     font-family: 'Line Awesome Free';
+     font-weight: 900;
+     background: unset;
+}
+
+.iziToast>.iziToast-close::before {
+     content: "\f00d";
+}
+
+.iziToast>.iziToast-progressbar>div {
+     height: 4px;
+}
+
+.iziToast>.iziToast-close{
+     width: 50px;
+}

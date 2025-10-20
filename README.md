@@ -2,7 +2,7 @@
 
 **Vivid Innovation for Excellence**
 
-![Vinexel Logo](https://vinexel.com/public/static/elwira/images/logo.png)
+![Vinexel Logo](https://vinexel.com/static/vinexel/images/logo.png)
 
 > “Think different. Build the Vinexel way.” — _Vinexel Pioneers_
 

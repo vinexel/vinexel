@@ -14,4 +14,4 @@ public/static/visioniconic
 system/vendor/plugins/
 system/storage/cache/
 system/storage/logging/
-vendor/
+/vendor/

@@ -1,9 +1,17 @@
 # Ignore files
-app/Elwira/.env
+public/blocked_ips.txt
+app/Dashkit/.env
 composer.lock
 go.sum
 
 # Ignore folders
+app/Elwira
+public/static/elwira
+app/Flymetrade
+public/static/flymetrade
+app/Visioniconic
+public/static/visioniconic
 system/vendor/plugins/
-system/storage/cache
-system/storage/logging
+system/storage/cache/
+system/storage/logging/
+vendor/

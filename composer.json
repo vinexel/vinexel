@@ -1,11 +1,10 @@
 {
     "name": "vinexel/vinexel",
-    "description": "A fullstack multi project web framework with Hierarchical Model View Controller (HMVC) Multi Project, hybrid Golang restapi and PHP rendering Framework",
+    "description": "A fullstack multi project web framework with Hierarchical Model View Controller (H-MVC) Multi Project, hybrid Golang restapi and PHP Rapid Framework",
     "keywords": ["Framework", "PHP", "Golang", "HMVC", "hybrid Golang and PHP Framework", "Vinexel", "PHP Vinexel Framework", "Golang Vinexel Framework", "Vinexel Indonesia", "PHP Vinexel", "Golang Vinexel"],
     "type": "project",
     "license": "MIT",
     "homepage": "https://vinexel.com",
-    "version": "1.0.0",
     "minimum-stability": "stable",
     "prefer-stable": true,
 
@@ -52,7 +51,7 @@
     },
 
     "require": {
-        "php": "^8.0",
+        "php": "^8.3",
         "vinexel/vision-serve": "^1.0.0"
     }
 }

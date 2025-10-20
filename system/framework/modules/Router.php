@@ -16,9 +16,10 @@ use Vinexel\Modules\Router\Router as BaseRouter;
 class Router
 {
     /**
-     * Set namespace for controller.
+     * Set the default namespace for controllers.
      *
      * @param string $namespace
+     * @return void
      */
     public static function setNamespace($namespace)
     {
@@ -26,9 +27,10 @@ class Router
     }
 
     /**
-     * Set namespace for model.
+     * Set the default namespace for models.
      *
      * @param string $namespace
+     * @return void
      */
     public static function setModelNamespace($namespace)
     {
@@ -36,12 +38,13 @@ class Router
     }
 
     /**
-     * Add new route.
+     * Register a new route with the given HTTP method, URI, and action.
      *
      * @param string $method
      * @param string $uri
-     * @param callable|string $action
+     * @param callable|array|string $action
      * @param array $middleware
+     * @return void
      */
     public static function add($method, $uri, $action, $middleware = [])
     {
@@ -49,10 +52,11 @@ class Router
     }
 
     /**
-     * Add route group.
+     * Create a group of routes that share attributes such as prefix or middleware.
      *
      * @param array $attributes
      * @param callable $callback
+     * @return void
      */
     public static function group($attributes, callable $callback)
     {
@@ -60,19 +64,21 @@ class Router
     }
 
     /**
-     * Run routing.
+     * Dispatch the current request to the matched route.
      *
-     * @param string $defaultController
-     * @param string $defaultMethod
-     * @param array $defaultParams
+     * This method executes the route action corresponding to
+     * the current request URI and HTTP method.
+     *
+     * @return void
      */
-    public static function dispatch($defaultController = 'app\\' . PROJECT_NAME . '\\Controllers\\HomeController', $defaultMethod = 'index', $defaultParams = [])
+    public static function dispatch()
     {
-        BaseRouter::dispatch($defaultController, $defaultMethod, $defaultParams);
+        // If BaseRouter::dispatch() takes no parameters, call it directly.
+        BaseRouter::dispatch();
     }
 
     /**
-     * Ambil model secara dinamis.
+     * Retrieve a model instance or perform model binding for the route.
      *
      * @param string $model
      * @return mixed
@@ -83,10 +89,11 @@ class Router
     }
 
     /**
-     * Kembalikan respons dalam format JSON.
+     * Send a JSON response with the given data and status code.
      *
-     * @param array|object $data
+     * @param mixed $data
      * @param int $status
+     * @return void
      */
     public static function json($data, $status = 200)
     {

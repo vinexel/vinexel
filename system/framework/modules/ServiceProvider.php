@@ -11,9 +11,9 @@
 
 namespace Vision\Modules;
 
-use Vision\Modules\Container;
-use Vision\Modules\Database;
-use Deeper\Libraries\Session;
+use \Vision\Modules\Database;
+use \Vision\Modules\Container;
+use \Deeper\Libraries\Session;
 
 class ServiceProvider
 {

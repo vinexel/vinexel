@@ -1,17 +1,17 @@
 package main
 
 import (
-	elwira "vinexel/app/elwira/system"
+	dashkit "vinexel/app/dashkit/system"
 	core "vinexel/system/framework/restapi"
 )
 
 func main() {
-	// Inisialisasi
+	// Initialize
 	e, db := core.InitApp()
 
-	// Registrasi routing project:
-	elwira.APIRoutes(e, db)
+	// Register project routing:
+	dashkit.APIRoutes(e, db)
 
-	// Jalankan server
+	// Run the server
 	core.StartServer(e, "9000")
 }

@@ -1,7 +1,7 @@
 Options -Multiviews
 
 RewriteEngine On
-RewriteCond %{HTTP_USER_AGENT} ^._(HTTrack|WebZip|wget|curl|Saveweb2zip|Python|Java|Go-http-client|aiohttp|scrapy)._$ [NC]
+RewriteCond %{HTTP_USER_AGENT} ^.*(HTTrack|WebZip|wget|curl|Saveweb2zip|Python|Java|Go-http-client|aiohttp|scrapy).*$ [NC]
 RewriteBase /
 
 <FilesMatch "config\.php|database\.php|.env|.sql">
@@ -9,10 +9,14 @@ Order Allow,Deny
 Deny from all
 </FilesMatch>
 
+# Allow access to file CSS, JS, and font
+RewriteCond %{REQUEST_URI} ^/assets/ [OR]
+RewriteCond %{REQUEST_URI} \.(css|js|woff|woff2|ttf|eot|svg)$ [NC]
+RewriteRule .* - [L]
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.\*)$ index.php?url=$1 [QSA,L]
-RewriteRule \.(jpg|jpeg|png|gif)$ - [F]
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
 
 <IfModule mod_headers.c>
     Header set Access-Control-Allow-Origin "*"

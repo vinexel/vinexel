@@ -11,13 +11,13 @@
 
 namespace Vision\Modules;
 
-use Vinexel\Modules\Container\Container as VisionContainer;
-use Vision\Modules\Database;
+use \Vinexel\Modules\Container\Container as VisionContainer;
+use \Vision\Modules\Database;
 
 class Container
 {
     /**
-     * Mengambil instance dari layanan dengan memperhatikan dependensi
+     * Retrieve an instance of a service while handling its dependencies.
      *
      * @param string $abstract
      * @return mixed
@@ -25,12 +25,12 @@ class Container
      */
     public static function get($abstract)
     {
-        // Menambahkan logika tambahan jika diperlukan
+        // Add additional logic here if needed
         return VisionContainer::get($abstract);
     }
 
     /**
-     * Mengambil instance dari layanan Database
+     * Retrieve an instance of the Database service.
      *
      * @return Database
      * @throws \Exception
@@ -41,7 +41,7 @@ class Container
     }
 
     /**
-     * Menyimpan instance layanan ke dalam container
+     * Register a singleton service instance in the container.
      *
      * @param string $abstract
      * @param mixed $factory
@@ -52,7 +52,7 @@ class Container
     }
 
     /**
-     * Mengonfigurasi layanan
+     * Configure a service with a specific key-value pair.
      *
      * @param string $key
      * @param mixed $value
@@ -63,7 +63,7 @@ class Container
     }
 
     /**
-     * Menyimpan dan mengatur factory untuk layanan dengan dependensi
+     * Register a factory for creating services with dependencies.
      *
      * @param string $abstract
      * @param callable $factory
@@ -74,7 +74,7 @@ class Container
     }
 
     /**
-     * Menghapus instance dari layanan
+     * Remove a registered service instance from the container.
      *
      * @param string $abstract
      */
@@ -84,7 +84,7 @@ class Container
     }
 
     /**
-     * Resolve layanan dari container
+     * Resolve a service instance from the container.
      *
      * @param string $abstract
      * @return mixed

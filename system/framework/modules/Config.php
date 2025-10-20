@@ -11,7 +11,7 @@
 
 namespace Vision\Modules;
 
-use Vinexel\Modules\Config\Config as ConfigModule;
+use \Vinexel\Modules\Config\Config as ConfigModule;
 use Exception;
 
 class Config
@@ -27,23 +27,24 @@ class Config
     public static function loadEnv($filePath)
     {
         if (self::$isLoaded) {
-            return; // Skip if loaded
+            return;
         }
 
-        if (!file_exists($filePath)) {
-            die("Environment file not found at: $filePath");
-        }
+        // if (!file_exists($filePath)) {
+        //     die("Environment file not found at: $filePath");
+        // }
 
         try {
             ConfigModule::loadEnv($filePath);
             self::$isLoaded = true;
         } catch (Exception $e) {
-            die("Error loading environment file: " . $e->getMessage());
+            // die("Error loading environment file: " . $e->getMessage());
+            // Optionally handle errors here
         }
     }
 
     /**
-     * Mendapatkan nilai konfigurasi berdasarkan key
+     * Get configuration value by key
      *
      * @param string $key
      * @param mixed $default
@@ -55,7 +56,7 @@ class Config
     }
 
     /**
-     * Mendapatkan semua data konfigurasi
+     * Get all configuration values
      *
      * @return array
      */

@@ -1,35 +1,33 @@
 <?php
 
-/**
- * Vinexel Framework
- *
- * @package Vision
- * @author Elwira Perdana
- * @copyright (c) PT Iconic Wira Niaga
- * @license MIT License
- */
-
 namespace Vision;
 
-use \Vinexel\Modules\RegisterModule;
+use Vinexel\Modules\RegisterModule;
 
 class Application extends RegisterModule
 {
-    /**
-     * {@inheritdoc}
-     */
-    protected function onCreate(): void {}
+    protected function onCreate(): void
+    {
+        // Call the parent onCreate() first from parent (RegisterModule)
+        parent::onCreate();
 
-    /**
-     * {@inheritdoc}
-     */
-    protected function onFinish(array $info): void {}
+        // Add custom logic if needed
+        // For example: additional logging or middleware
+    }
 
-    /**
-     * {@inheritdoc}
-     */
+    protected function onFinish(array $info): void
+    {
+        parent::onFinish($info);
+
+        // Add custom post-processing logic if needed
+        // error_log("Finished processing {$info['controller']}::{$info['method']}");
+    }
+
     protected function onDestroy(): void
     {
-        gc_collect_cycles();
+        // Call parent cleanup routine
+        parent::onDestroy();
+
+        // Add additional cleanup logic if needed
     }
 }

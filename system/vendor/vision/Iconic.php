@@ -44,7 +44,7 @@ spl_autoload_register(function ($class) {
             require $file;
             return;
         } else {
-            die("File $file not found at Iconic loader.");
+            die("File $file not found at Iconic framework loader.");
         }
     }
 });

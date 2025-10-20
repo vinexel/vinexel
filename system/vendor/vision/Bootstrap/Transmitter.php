@@ -6,7 +6,7 @@
  * @package Vision
  * @author Elwira Perdana
  * @copyright (c) PT Iconic Wira Niaga
- * @license MIT License
+ * @license Envato License
  */
 
 namespace Iconic\Bootstrap;
@@ -35,7 +35,7 @@ final class Transmitter
      */
     public static function init(): void
     {
-        // Foundation::initialize();
+        self::run();
         self::finish();
     }
 
@@ -83,7 +83,7 @@ final class Transmitter
             . DIRECTORY_SEPARATOR
             . ucfirst('initialize')
             . DIRECTORY_SEPARATOR
-            . 'Functions.php';
+            . 'Headers.php';
     }
 
     /**

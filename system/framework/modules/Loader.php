@@ -11,12 +11,18 @@
 
 namespace Vision\Modules;
 
-use Vinexel\Modules\Config\Loader as VisionLoader;
+use \Vinexel\Modules\Config\Loader as VisionLoader;
 
 class Loader
 {
     /**
-     * Memanggil Loader dari Vision namespace untuk memuat project
+     * Calls the Vision namespace loader to initialize and load the project.
+     *
+     * This method delegates the project loading process to the
+     * `VisionLoader::ProjectLoader()` which handles configuration
+     * and initialization for the current application environment.
+     *
+     * @return void
      */
     public static function ProjectLoader()
     {

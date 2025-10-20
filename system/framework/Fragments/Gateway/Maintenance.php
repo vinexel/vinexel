@@ -39,7 +39,7 @@ if ($maintenanceMode === '1' || $maintenanceMode === 'true') {
         require $projectRoutesPath;
     } else {
         header("HTTP/1.1 404 Not Found");
-        echo "Maintenance mode aktif, tetapi file Maintenance.php tidak ditemukan pada" . $projectRoutesPath;
+        echo "Maintenance mode is active, but Maintenance file not found at" . $projectRoutesPath;
     }
     exit();
 }

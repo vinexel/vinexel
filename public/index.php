@@ -5,22 +5,24 @@
  *
  * @package Vision
  * @author Elwira Perdana
- * @copyright (c) PT Iconic Wira Niaga
+ * @copyright (c) PT Iconic Wira Niaga (ICONIC GROUP)
  * @license MIT License
  */
 
 use \Iconic\Bootstrap\Transmitter;
+
+date_default_timezone_set('Asia/Jakarta');
 
 ob_start();
 define('VISION_START', microtime(true));
 
 $file = dirname(__DIR__)
     . DIRECTORY_SEPARATOR
-    . 'system'
+    . strtolower('system')
     . DIRECTORY_SEPARATOR
-    . 'vendor'
+    . strtolower('vendor')
     . DIRECTORY_SEPARATOR
-    . 'vision'
+    . strtolower('vision')
     . DIRECTORY_SEPARATOR
     . 'Iconic.php';
 if (file_exists($file)) {
